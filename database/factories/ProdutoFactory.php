@@ -17,10 +17,10 @@ class ProdutoFactory extends Factory
     public function definition(): array
     {
         return [
-            'nome' => fake()->name(),
+            'nome' => fake()->word(),
             'id_tipo_produto' => 1,
             'descricao' => fake()->text(),
-            
+
         ];
     }
 }
