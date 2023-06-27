@@ -1,7 +1,18 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\
+{
+    CargoController,
+    ClienteController,
+    EnderecoController,
+    ProfileController,
+    PedidoController,
+    ProdutoController,
+    ProdutoTamanhoController,
+};
+use App\Models\Cargo;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +38,27 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+/**
+ * ------------------------
+ *         Cargos
+ *-------------------------
+ */
+
+ Route::prefix('cargos')
+        ->controller(CargoController::class)
+        ->group(function () {
+            Route::get('/','index')->name('cargo.index');
+            Route::get('/novo','create')->name('cargo.create');
+            Route::get('/{id}','show')->name('cargo.show');
+            Route::get('/editar/{id}','edit')->name('cargo.edit');
+
+            Route::post('/store','store')->name('cargo.store');
+            Route::post('/update','update')->name('cargo.update');
+            Route::post('/destroy','destroy')->name('cargo.destroy');
+        });
+
+
+
 
 require __DIR__.'/auth.php';
