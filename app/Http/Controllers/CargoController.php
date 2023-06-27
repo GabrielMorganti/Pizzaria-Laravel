@@ -47,7 +47,7 @@ class CargoController extends Controller
     public function store(Request $request)
     {
         $cargo = Cargo::create($request->all());
-        return redirect()->route('cargo.index')->with('success','Cadastrado com Sucesso!')
+        return redirect()->route('cargo.index')->with('success','Cadastrado com Sucesso!');
     }
 
     /**
@@ -65,7 +65,7 @@ class CargoController extends Controller
     public function edit(Integer $id)
     {
         $cargo = Cargo::find($id);
-        return view('cargo.form')->with(compact('cargo'))
+        return view('cargo.form')->with(compact('cargo'));
 
     }
 
