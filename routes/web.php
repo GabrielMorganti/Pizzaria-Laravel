@@ -60,7 +60,7 @@ Route::middleware('auth')->group(function () {
 /**
  * ------------------------
  *        |Clientes|
- *-------------------------
+ * ------------------------
  */
 
  Route::prefix('clientes')
@@ -78,7 +78,7 @@ Route::middleware('auth')->group(function () {
 /**
  * ------------------------
  *        |Endereço|
- *-------------------------
+ * ------------------------
  */
 
  Route::prefix('enderecos')
@@ -96,7 +96,7 @@ Route::middleware('auth')->group(function () {
 /**
  * ------------------------
  *        |Pedidos|
- *-------------------------
+ * ------------------------
  */
 
  Route::prefix('pedidos')
@@ -114,7 +114,7 @@ Route::middleware('auth')->group(function () {
 /**
  * ------------------------
  *        |Produtos|
- *-------------------------
+ * ------------------------
  */
 
  Route::prefix('produtos')
@@ -132,7 +132,7 @@ Route::middleware('auth')->group(function () {
 /**
  * ------------------------
  *   |Produtos Tamanhos|
- *-------------------------
+ * -----------------------
  */
 
  Route::prefix('tamanhos')
