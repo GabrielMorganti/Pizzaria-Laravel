@@ -16,11 +16,10 @@
         <tr>
             <td>
                 <a class="btn btn-success" href="#"><i class="bi bi-pencil"></i></a>
-                <a class="btn btn-primary" href="#"><i class="bi bi-eye"></i></a>
             </td>
 
             <td>
-                ---
+                {{$cargo->cargo}}
             </td>
         </tr>
     </tbody>

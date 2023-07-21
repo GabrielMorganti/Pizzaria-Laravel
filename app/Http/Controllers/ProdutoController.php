@@ -57,7 +57,7 @@ class ProdutoController extends Controller
 
         return view('produto.show')
             ->with(compact(
-                'produtos',
+                'produto',
                 'tamanhos'
             ));
     }
@@ -99,7 +99,7 @@ class ProdutoController extends Controller
     {
         $produtoTamanho = null;
         $produto = Produto::find($id_produto);
-        $tamanhos = ProdutoTamanho::class;
+        $tamanhos = Tamanho::class;
 
         return view('produto.formTamanho')
             ->with(compact('produto', 'tamanhos', 'produtoTamanho'));

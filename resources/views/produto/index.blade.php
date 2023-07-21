@@ -1,17 +1,19 @@
 @extends('layouts.base')
 @section('content')
 
-<h1>Cargos</h1>
+<h1>Produtos</h1>
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Ações</th>
-            <th>ID</th>
-            <th>Cargo</th>
+            <th class="col-2">Ações</th>
+            <th class="col-1">ID</th>
+            <th>Produto</th>
+            <th>Observações</th>
+            <th>Qtd Tamanhos</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($produtos as $produto )
+        @foreach ($produtos->get() as $produto)
 
         <tr>
             <td>
@@ -23,6 +25,9 @@
             <td>{{$produto->id_produto}}</td>
 
             <td>{{$produto->nome}}</td>
+
+            <td>{{ nl2br($produto->observacoes)}}</td>
+            <td>{!! $produto->tamanhos()->count() !!}</td>
         </tr>
         @endforeach
     </tbody>
