@@ -1,6 +1,7 @@
 @extends('layouts.base')
 @section('content')
 
+
 <h1>Cargos</h1>
 <table class="table table-striped">
     <thead>
