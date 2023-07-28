@@ -1,6 +1,5 @@
-@extends('layouts.base')
-@section('content')
-
+@extends('layouts.baseadm')
+@section('contentadm')
 
 <h1>Cargos</h1>
 <table class="table table-striped">
@@ -28,8 +27,8 @@
         @endforeach
     </tbody>
 </table>
-
 @endsection
+
 
 {{-- Script --}}
 @section('scripts')

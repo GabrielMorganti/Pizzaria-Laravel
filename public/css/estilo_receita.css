@@ -1,3 +1,9 @@
+.table > :not(caption) > * > * {
+
+    background-color: transparent;
+}
+
+
 body{
     background-color: #FCEAE6;
     overflow-x: hidden;

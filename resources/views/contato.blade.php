@@ -225,10 +225,9 @@
                         <textarea class="form-control" name="conteudo" id="conteudo"></textarea>
                     </div>
                     <div class="col-md-2 mt-3">
-                        <input type="submit" class="btn btn-dark mb-5 mt-1 btn-lg" name="btnEnviar" id="btnEviar"
-                            value=" Enviar " style="float:left; width:110; height:10;">
+                        <button type="submit" class="btn btn-dark mb-5 mt-1 btn-lg" name="btnEnviar" id="btnEviar"
+                            value="Enviar" style="float:left;">Enviar</button>
                     </div>
-
                 </div>
             </form>
         </div>

@@ -1,5 +1,5 @@
-@extends('layouts.base')
-@section('content')
+@extends('layouts.baseadm')
+@section('contentadm')
 
 <h1>Editar Produto</h1>
 

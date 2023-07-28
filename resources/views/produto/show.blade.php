@@ -1,5 +1,5 @@
-@extends('layouts.base')
-@section('content')
+@extends('layouts.baseadm')
+@section('contentadm')
     {{-- Menu --}}
     @include('produto.partials.menu')
     {{-- /Menu --}}

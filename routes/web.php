@@ -112,9 +112,16 @@ Route::middleware('auth')->group(function () {
             Route::get('/{id}','show')->name('cliente.show');
             Route::get('/editar/{id}','edit')->name('cliente.edit');
 
+            Route::get('/novo','create')->name('endereco.create');
+            Route::get('/editar/{id}','edit')->name('endereco.edit');
+
             Route::post('/store','store')->name('cliente.store');
             Route::post('/update','update')->name('cliente.update');
             Route::post('/destroy','destroy')->name('cliente.destroy');
+
+            Route::post('/store','store')->name('endereco.store');
+            Route::post('/update','update')->name('endereco.update');
+            Route::post('/destroy','destroy')->name('endereco.destroy');
         });
 /**
  * ------------------------
@@ -122,18 +129,18 @@ Route::middleware('auth')->group(function () {
  * ------------------------
  */
 
- Route::prefix('enderecos')
-        ->controller(EnderecoController::class)
-        ->group(function () {
-            Route::get('/','index')->name('endereco.index');
-            Route::get('/novo','create')->name('endereco.create');
-            Route::get('/{id}','show')->name('endereco.show');
-            Route::get('/editar/{id}','edit')->name('endereco.edit');
+//  Route::prefix('enderecos')
+//         ->controller(EnderecoController::class)
+//         ->group(function () {
+//             Route::get('/','index')->name('endereco.index');
+//             Route::get('/novo','create')->name('endereco.create');
+//             Route::get('/{id}','show')->name('endereco.show');
+//             Route::get('/editar/{id}','edit')->name('endereco.edit');
 
-            Route::post('/store','store')->name('endereco.store');
-            Route::post('/update','update')->name('endereco.update');
-            Route::post('/destroy','destroy')->name('endereco.destroy');
-        });
+//             Route::post('/store','store')->name('endereco.store');
+//             Route::post('/update','update')->name('endereco.update');
+//             Route::post('/destroy','destroy')->name('endereco.destroy');
+//         });
 /**
  * ------------------------
  *        |Pedidos|

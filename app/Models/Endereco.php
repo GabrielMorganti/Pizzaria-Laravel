@@ -28,16 +28,16 @@ class Endereco extends Model
         'cep',
         'observacoes',
     ];
-
-    /**
+      /**
      * ----------------------------------------------------------------------------------
      *                                     RELACIONAMENTOS
      * ----------------------------------------------------------------------------------
      */
 
-    //  public function usuarios() : object {
-    //         return $this->belongsTo(User::class,
-    //                                 'id_cargo',
-    //                                 'id_cargo');
-    //  }
+     public function clientendereco() : object
+     {
+            return $this->belongsTo(ClienteEndereco::class,
+                                    'id_cliente_endereco',
+                                    'id_cliente_endereco');
+     }
 }

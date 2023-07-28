@@ -1,5 +1,6 @@
-@extends('layouts.base')
-@section('content')
+@extends('layouts.baseadm')
+
+@section('contentadm')
 
 <h1>Produtos</h1>
 <table class="table table-striped">

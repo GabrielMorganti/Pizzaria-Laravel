@@ -174,11 +174,11 @@
     <div class="flex-container">
         <div class="row mt-5">
             <div class="col-md-4 text-center menufixo">
-                <table class="table">
+                <table class="table text-center">
                     <thead>
                     <tbody>
                         <tr>
-                            <th scope="row "></th>
+                            <th scope="row"></th>
                             <td>
                                 <h1> <img src="img/icons8-rolling-pin-50.png" alt=""> CONHEÇA NOSSO CARDÁPIO
                                 </h1>
@@ -191,7 +191,7 @@
 
                 <div class="row mt-3"></div>
 
-                <table class="table table-hover">
+                <table class="table table-hover text-center">
                     <thead>
                     <tbody>
                         <tr>
@@ -205,7 +205,7 @@
                     </thead>
                 </table>
 
-                <table class="table table-hover">
+                <table class="table table-hover text-center">
                     <thead>
                     <tbody>
                         <tr>
@@ -218,7 +218,7 @@
                     </thead>
                 </table>
 
-                <table class="table table-hover">
+                <table class="table table-hover text-center">
                     <thead>
                     <tbody>
                         <tr>
@@ -231,7 +231,7 @@
                     </thead>
                 </table>
 
-                <table class="table table-hover">
+                <table class="table table-hover text-center">
                     <thead>
                     <tbody>
                         <tr>
