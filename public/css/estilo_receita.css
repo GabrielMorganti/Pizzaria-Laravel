@@ -1,6 +1,6 @@
-
 body{
     background-color: #FCEAE6;
+    overflow-x: hidden;
 }
 
 .banner{
@@ -25,7 +25,7 @@ body{
     #logo {
         height: 100px;
     }
-    
+
     #logo img {
         height: 95px;
     }
@@ -75,15 +75,15 @@ body{
     .nav-link {
         color: white;
     }
-    
+
     .nav-link {
         color: white;
     }
-    
+
     .nav-item a:hover {
         color: #f6aa1c;
     }
-    
+
     .background{
         background-color: #751d0c;
     }
@@ -93,7 +93,7 @@ body{
         border-bottom-width: 3px ;
         border-bottom-color: black;
     }
-    
+
 /* /Header PC*/
 
 /* Content */
@@ -106,6 +106,10 @@ body{
 
     .promocao #mostrarMais2 {
         display:none;
+    }
+
+    .pizzaria{
+        margin-left: 20px;
     }
 
     .backgroundimg{
@@ -123,7 +127,7 @@ body{
     .promocao .flex-container{
         display: flex;
         justify-content: space-between;
-        
+
     }
 
     .vermais .flex-container{
@@ -168,7 +172,6 @@ body{
         }
 
         .menufixo{
-           
             height: 50px;
             margin-top: 0px; /* altura que está do topo */
             top: 0px; /* altura que vai parar antes do topo */
@@ -179,7 +182,7 @@ body{
     /* /Menu Content */
 
 
-    
+
 /* /Content */
 
 /* Footer */
@@ -201,13 +204,13 @@ body{
     .patrocinio img {
         height: 50px;
     }
-    
+
     .patrocinio .flex-container{
         display: flex;
         flex-direction: row;
         justify-content:space-between;
     }
-    
+
     .patrocinio .flex-container p{
         font-size: 1.3em;
         margin-top: 10px;
@@ -354,7 +357,7 @@ body{
     #logo {
         height: 80px;
     }
-    
+
     #logo img {
         height: 95px;
     }
@@ -399,7 +402,11 @@ body{
 
 
 /* INDEX */
-    
+
+.pizzaria{
+    margin-left: 0px;
+}
+
 /* /INDEX */
 
 
@@ -419,7 +426,7 @@ body{
     .patrocinio2 img {
         height: 70px;
     }
-    
+
     .patrocinio .flex-container{
         display: flex;
         flex-direction: row;
@@ -431,7 +438,7 @@ body{
         flex-direction: row;
         justify-content:center;
     }
-    
+
     .patrocinio .flex-container p{
         font-size: 1.3em;
         margin-top: 10px;

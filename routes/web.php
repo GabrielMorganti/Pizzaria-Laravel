@@ -29,6 +29,46 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/cardapio', function () {
+    return view('entradas');
+});
+
+Route::get('/entradas', function () {
+    return view('entradas');
+});
+
+Route::get('/montesuapizza', function () {
+    return view('montesuapizza');
+});
+
+Route::get('/contato', function () {
+    return view('contato');
+});
+
+Route::get('/sobrenos', function () {
+    return view('sobrenos');
+});
+
+Route::get('/pizzas', function () {
+    return view('pizzas');
+});
+
+Route::get('/pizzas2', function () {
+    return view('pizzas2');
+});
+
+Route::get('/bebidas', function () {
+    return view('bebidas');
+});
+
+Route::get('/bebidas2', function () {
+    return view('bebidas2');
+});
+
+Route::get('/sobremesas', function () {
+    return view('sobremesas');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -38,6 +78,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 
 /**
  * ------------------------

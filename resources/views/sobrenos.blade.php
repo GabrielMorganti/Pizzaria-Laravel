@@ -374,7 +374,7 @@
     <div class="row mt-5">
         <h1>Informações Sobre Entrega e Retirada</h1>
     </div>
-    
+
     <div class="row mt-5">
         <h1>Avalições</h1>
     </div>

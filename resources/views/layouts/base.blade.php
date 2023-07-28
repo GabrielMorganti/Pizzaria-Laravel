@@ -17,8 +17,8 @@
     {{-- /Bootstrap --}}
 
     {{-- CSS --}}
-    <link rel="stylesheet" href="{{ asset('css/estilo_receita.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/botao.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/estilo_receita.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/botao.css') }}" type="text/css">
     {{-- /CSS --}}
 
     {{-- JS --}}
@@ -37,198 +37,224 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     {{-- /Icones --}}
+
+    <!-- fonte teste -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+    <!-- /fonte teste  -->
 </head>
 
 <body>
-    <div class="container-fluid header">
-        <div class="row background d-none d-md-block d-xl-block">
-            <!-- Telefones -->
-            <div class="flex-container d-none d-md-block d-xl-block">
-                <div class="row contato-entrega">
-                    <div class="col-6 d-flex justify-content-start">
-                        <p><i class="bi bi-telephone"></i> Contato para entrega: (11)98829-5583 | (11)92548-7734</p>
+    <footer class="container-fluid my-3">
+        <div class="row ">
+            <div class="container-fluid rodape">
+                <div class="row contact-1">
+                    <div class="col-md-4 mt-5 logo-footer">
+                        <div class="footer-img mb-4">
+                            <a class="" href="http://127.0.0.1:8000"><img class="footer-img"
+                                    src="img/logo2.png" alt="">
+                            </a>
+                            <p>A Bella-Pizzaria tem a melhor pizza da América Latina
+                                <br>venha ter uma expêriencia única
+                            </p>
+                        </div>
+
+                        <div class="mt-5"></div>
+
+
+                        <div class="mt-5 flex-container">
+                            <a class="icon rounded-circle border border-secondary" href="https://www.facebook.com"
+                                target="_blank">
+                                <h4 class=""><i class="bi bi-facebook"></i></h4>
+                            </a>
+                            <a class="icon rounded-circle border border-secondary" href="https://www.instagram.com"
+                                target="_blank">
+                                <h4><i class="bi bi-instagram"></i></h4>
+                            </a>
+                            <a class="icon rounded-circle border border-secondary" href="https://www.twitter.com"
+                                target="_blank">
+                                <h4><i class="bi bi-whatsapp"></i></h4>
+                            </a>
+                        </div>
+
+                        <div class="mt-3"></div>
                     </div>
 
-                    <div class="col-6 d-flex justify-content-end ">
-                        <p><i class="bi bi-whatsapp"></i> WhatsApp: (11)99866-9082</p>
-                    </div>
-                </div>
-            </div>
-            <!-- /Telefones -->
+                    <div class="col-md-1">
 
-            <!-- Navbar -->
-            <div class="row navbar">
-                <div class="col-md-2">
-                    <div class="flex-container">
-                        <a class="d-flex justify-content-md-center"
-                            href="http://localhost/bella-pizzaria/index.php"><img class="" id="logo"
-                                src="img/logo2.png" alt=""></a>
                     </div>
-                </div>
 
-                <div class="col-md-8 d-flex justify-content-md-center">
-                    <div class="flex-container">
-                        <nav class=" navbar navbar-expand-lg w-100 p-3 h-100 d-inline-block" style="width: 100px">
-                            <div class="container-fluid">
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarNav">
-                                    <ul class="navbar-nav d-flex justify-content-end">
-                                        <li class="nav-item">
-                                            <a class="nav-link" aria-current="page"
-                                                href="http://localhost/bella-pizzaria/index.php">Pagina Inicial <span
-                                                    class="sr-only">(Pagina Atual)</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link"
-                                                href="http://localhost/bella-pizzaria/entradas.php">Cardápio</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link"
-                                                href="http://localhost/bella-pizzaria/promocoes.php">Monte Sua Pizza</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link"
-                                                href="http://localhost/bella-pizzaria/contato.php">Contato</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="http://localhost/bella-pizzaria/contato.php">Sobre
-                                                Nós</a>
-                                        </li>
-                                    </ul>
+                    <div class="col-md-3 mt-5 categorias-footer">
+                        <div class="flex-container">
+                            <ul>
+                                <a href="http://127.0.0.1:8000">
+                                    <li>Pagina inicial</li>
+                                </a>
+                                <a href="http://127.0.0.1:8000/cardapio">
+                                    <li>Cardápio</li>
+                                </a>
+                                <a href="http://127.0.0.1:8000/montesuapizza">
+                                    <li>Monte Sua Pizza</li>
+                                </a>
+                                <a href="http://127.0.0.1:8000/contato">
+                                    <li>Contato</li>
+                                </a>
+                                <a href="http://127.0.0.1:8000/sobrenos">
+                                    <li>Sobre Nós</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mt-5 links-footer">
+                        <div class="flex-container">
+                            <ul>
+                                <a href="">
+                                    <li>Sobre nós</li>
+                                </a>
+                                <a href="">
+                                    <li>Autores</li>
+                                </a>
+                                <a href="/wordpress/?page_id=84">
+                                    <li>Contato</li>
+                                </a>
+                                <a href="">
+                                    <li>Políticas de Privacidade</li>
+                                </a>
+                                <a href="">
+                                    <li>Termos de Uso</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="col-md-12 copy-footer patrocinio">
+                        <div class="flex-container">
+                            <p class="">Design: Bella-Pizzaria</p>
+                            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade"
+                                data-ride="carousel">
+                                <div class="carousel-inner d-none d-md-block d-xl-block">
+                                    <div class="carousel-item active">
+                                        <img class="img-fluid" src="img/patrocinio-ifood.png" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid" src="img/patrocinio-rappi.png" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid" src="img/patrocinio-seu-menu.png" alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid" src="img/patrocinio-uber-eats.png" alt="Third slide">
+                                    </div>
                                 </div>
                             </div>
-                        </nav>
+                            <p class="">Copyright (c) 2023 Bella-Pizzaria. Todos os direitos reservados</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-2 redes-sociais" id="sociais">
-                    <div class="flex-container">
-                        <a class="icon rounded-circle border border-secondary d-flex align-items-center"
-                            href="https://www.facebook.com" target="_blank">
-                            <h4 class=""><i class="bi bi-facebook"></i></h4>
-                        </a>
-                        <a class="icon rounded-circle border border-secondary" href="https://www.instagram.com"
-                            target="_blank">
-                            <h4><i class="bi bi-instagram"></i></h4>
-                        </a>
-                        <a class="icon rounded-circle border border-secondary" href="https://www.twitter.com"
-                            target="_blank">
-                            <h4><i class="bi bi-whatsapp"></i></h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Navbar -->
-
-
-
-        </div>
-
-        <div class="row background col-sm-12 d-block d-md-none">
-            <!-- Navbar -->
-            <div class="row navbar-cell">
-                <div class="col-md-12">
-                    <div class="flex-container">
-                        <a class="mt-1" href="http://localhost/bella-pizzaria/index.php"><img class=""
-                                id="logo" src="img/logo2.png" alt=""></a>
-
-                        <a class="icon rounded-circle border border-secondary d-flex align-items-center"
-                            href="https://www.facebook.com" target="_blank">
-                            <h4 class=""><i class="bi bi-facebook"></i></h4>
-                        </a>
-                        <a class="icon rounded-circle border border-secondary" href="https://www.instagram.com"
-                            target="_blank">
-                            <h4><i class="bi bi-instagram"></i></h4>
-                        </a>
-                        <a class="icon rounded-circle border border-secondary" href="https://www.twitter.com"
-                            target="_blank">
-                            <h4><i class="bi bi-whatsapp"></i></h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <nav class="navbar navbar-expand-lg">
-                        <div class="container-fluid">
-                            <a class="navbar-brand d-block d-md-none" href="#">MENU</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" aria-current="page"
-                                            href="http://localhost/bella-pizzaria/index.php">
-                                            <h2>Pagina Inicial</h2><span class="sr-only">
-                                                <h2>(Pagina Atual)</h2>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <h2>Cardápio</h2>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item"
-                                                    href="http://localhost/bella-pizzaria/entradas.php">Entradas</a>
-                                            </li>
-                                            <li><a class="dropdown-item"
-                                                    href="http://localhost/bella-pizzaria/pizzas.php">Pizzas</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="http://localhost/bella-pizzaria/bebidas.php">Bebidas</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="http://localhost/bella-pizzaria/sobremesas.php">Sobremesas</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="http://localhost/bella-pizzaria/promocoes.php">
-                                            <h2>Monte Sua Pizza</h2>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="http://localhost/bella-pizzaria/promocoes.php">
-                                            <h2>Promoções</h2>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="http://localhost/bella-pizzaria/contato.php">
-                                            <h2>Contato</h2>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="http://localhost/bella-pizzaria/acompanharpedido.php">
-                                            <h2>Sobre Nós</h2>
-                                        </a>
-                                    </li>
-                                </ul>
+                    <div class="col-md-12 col-sm-12 d-block d-md-none patrocinio2">
+                        <div class="flex-container">
+                            <div id="carouselExampleSlidesOnly " class="carousel slide carousel-fade"
+                                data-ride="carousel">
+                                <div class="carousel-inner ">
+                                    <div class="carousel-item active ">
+                                        <img class="img-fluid" src="img/patrocinio-ifood.png" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid" src="img/patrocinio-rappi.png" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid" src="img/patrocinio-seu-menu.png" alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid" src="img/patrocinio-uber-eats.png" alt="Third slide">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </nav>
+                    </div>
                 </div>
             </div>
-            <!-- /Navbar -->
         </div>
-    </div>
-
-    <div class="borda"></div>
-
-    <div class="container">
-        @yield('content')
-    </div>
-    <footer class="container-fluid my-3">
-        &copy; todos os direitos reservados - Bella-pizzaria
     </footer>
 
 </body>
+
+<script type='text/javascript'>
+@yield('scripts3')
+    <!-- Alterar apenas Aqui -->
+            function init_map() {
+                var myOptions = {
+                    zoom: 16,
+                    center: new google.maps.LatLng(-23.661267, -46.530082),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(-23.661267, -46.530082)
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<strong> Bella-Pizzaria </strong><br>  &nbsp &nbsp &nbsp &nbsp T94'
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map, marker);
+                });
+                infowindow.open(map, marker);
+            }
+            google.maps.event.addDomListener(window, 'load', init_map);
+</script>
+
+<script>
+    @yield('scripts2')
+        function leiaMais() {
+    const tresPontos = document.getElementById('tresPontos');
+    const mostrarMais = document.getElementById('mostrarMais');
+    const btnLeiaMais = document.getElementById('btnLeiaMais');
+
+
+    if (tresPontos.style.display == 'none') {
+        tresPontos.style.display = 'inline';
+        mostrarMais.style.display = 'none';
+        btnLeiaMais.innerHTML = 'Ver Mais';
+    } else {
+        tresPontos.style.display = 'none';
+        mostrarMais.style.display = 'inline';
+        btnLeiaMais.innerHTML = 'Ver Menos';
+    }
+}
+</script>
+
 @yield('scripts')
+<script>
+     // Get the button
+     let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
 
 </html>
