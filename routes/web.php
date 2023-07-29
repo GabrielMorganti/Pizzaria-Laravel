@@ -110,14 +110,14 @@ Route::middleware('auth')->group(function () {
             Route::get('/','index')->name('cliente.index');
             Route::get('/novo','create')->name('cliente.create');
             Route::get('/{id}','show')->name('cliente.show');
-            Route::get('/editar/{id}','edit')->name('cliente.edit');
+            Route::get('/editar/{id_cliente}','edit')->name('cliente.edit');
 
             Route::get('/novo','create')->name('endereco.create');
             Route::get('/editar/{id}','edit')->name('endereco.edit');
 
             Route::post('/store','store')->name('cliente.store');
             Route::post('/update','update')->name('cliente.update');
-            Route::post('/destroy','destroy')->name('cliente.destroy');
+            Route::post('/destroy{id}','destroy')->name('cliente.destroy');
 
             Route::post('/store','store')->name('endereco.store');
             Route::post('/update','update')->name('endereco.update');

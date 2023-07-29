@@ -1,5 +1,4 @@
 @extends('layouts.baseadm')
-
 @section('contentadm')
 
 <h1>Produtos</h1>
