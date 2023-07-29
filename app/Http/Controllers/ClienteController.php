@@ -29,6 +29,7 @@ class ClienteController extends Controller
         $cliente = null;
         return view('cliente.form')->with(compact('cliente'));
     }
+
     /**
      * Store a newly created resource in storage.
      */

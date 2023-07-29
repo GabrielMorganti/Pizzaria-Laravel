@@ -2,6 +2,9 @@
 @section('contentadm')
 
 <h1>Clientes</h1>
+<h6>
+    <a href=""></a>
+</h6>
 <table class="table table-striped">
     <thead>
         <tr>
