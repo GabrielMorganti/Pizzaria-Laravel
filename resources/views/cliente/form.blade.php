@@ -7,7 +7,7 @@
     }}
 </h1>
 
-<form action="{{ ($cliente) ? route('cliente.update') : route('')  }}" method="post" enctype="multipart/form-data">
+<form action="{{ ($cliente) ? route('cliente.update') : route('cliente.store')  }}" method="post" enctype="multipart/form-data">
     @csrf
 
     <div class="row">
