@@ -3,7 +3,7 @@
 
 <h1>Clientes</h1>
 <h6>
-    <a href=""></a>
+    <a class="btn btn-primary" href="{{ route('cliente.create')}}">Cadastrar novo Cliente</a>
 </h6>
 <table class="table table-striped">
     <thead>

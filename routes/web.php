@@ -112,7 +112,8 @@ Route::middleware('auth')->group(function () {
             Route::get('/{id}','show')->name('cliente.show');
             Route::get('/editar/{id_cliente}','edit')->name('cliente.edit');
 
-            Route::get('endereco/novo','create')->name('cliente.createEndereco');
+            Route::get('endereco/novo/{id_cliente}','create')->name('cliente.createEndereco');
+            Route::get('endereco/{id}','index')->name('cliente.indexEndereco');
             Route::get('endereco/editar/{id}','edit')->name('cliente.editEndereco');
 
             Route::post('/store','store')->name('cliente.store');
@@ -123,7 +124,7 @@ Route::middleware('auth')->group(function () {
             Route::post('endereco/update','update')->name('cliente.updateEndereco');
             Route::post('endereco/destroy','destroy')->name('cliente.destroyEndereco');
         });
-        
+
 /**
  * ------------------------
  *        |Endereço|

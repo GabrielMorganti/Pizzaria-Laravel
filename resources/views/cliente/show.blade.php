@@ -2,7 +2,7 @@
 @section('contentadm')
 
 <h1>Cliente: {{ $cliente->nome}}</h1>
-<h2>Relação de Usuários com esse cargo</h2>
+<h2>Informações do cliente</h2>
 
 <table class="table table-striped">
 
@@ -18,7 +18,7 @@
     <tbody>
         <tr>
             <td>
-                <a class="btn btn-success" href="#"><i class="bi bi-pencil"></i></a>
+                <a class="btn btn-success" href="{{route('cliente.edit', ['id_cliente'=>$cliente->id_cliente])}}"><i class="bi bi-pencil"></i></a>
             </td>
 
             <td>
@@ -39,12 +39,18 @@
 </table>
 
 <h1 class="mt-5">Endereços</h1>
+<h2>Endereços cadastrados</h2>
 <table class="table table-striped">
+    <h6><a class="btn btn-primary" href="{{route('cliente.createEndereco', ['id_cliente' => $cliente->id_cliente])}}">Cadastrar Endereço</a></h6>
 
     <thead>
         <tr>
             <th>Ações</th>
-            <th>Nome</th>
+            <th>ID</th>
+            <th>Endereço</th>
+            <th>Número</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
         </tr>
     </thead>
     <tbody>
@@ -54,7 +60,7 @@
             </td>
 
             <td>
-                {{$cliente->cliente}}
+                {{$endereco->cep}}
             </td>
         </tr>
     </tbody>
