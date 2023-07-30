@@ -3,63 +3,68 @@
 
 <h1>
     {{
-        ($cliente) ? 'Editar Cliente' : 'Cadastrar Cliente'
+        ($clienteEndereco) ? 'Editar Endereco' : 'Cadastrar Endereco'
     }}
 </h1>
 
-<form action="{{ ($cliente) ? route('cliente.update', ['id_cliente' => $cliente->id_cliente]) : route('cliente.store')}}" method="post" enctype="multipart/form-data">
+<form action="{{ ($clienteEndereco) ? route('cliente.updateEndereco') : route('cliente.storeEndereco', ['id_cliente' => $cliente->id_cliente])}}" method="post" enctype="multipart/form-data">
     @csrf
 
     <div class="row">
-        <div class="col-md-3">
-            <label class="form-label" for="nome">
-                Nome*
+        <div class="col-md-4">
+            <label class="form-label" for="endereco">
+                Endereco*
             </label>
 
-            @if ($cliente)
-                <input class="form-control" type="text" name="nome" id="nome" value="{{$cliente->nome}}" required>
-            @else
-                <input class="form-control" type="text" name="nome" id="nome" required>
-            @endif
+            <input class="form-control" type="text" name="endereco" id="endereco" value="{{ ($clienteEndereco)?$clienteEndereco->endereco : old('endereco') }}" required>
         </div>
 
-        <div class="col-md-3">
-            <label class="form-label" for="ddd" >
-                DDD
+        <div class="col-md-2">
+            <label class="form-label" for="numero" >
+                Numero
             </label>
 
-            @if ($cliente)
-                <input class="form-control" type="tel" name="ddd" id="ddd" value="{{$cliente->ddd}}" required>
-            @else
-                <input class="form-control" type="tel" name="ddd" id="ddd" required>
-            @endif
-
+            <input class="form-control" type="number" name="numero" id="numero" value="{{ ($clienteEndereco)?$clienteEndereco->numero : old('numero') }}">
         </div>
 
-        <div class="col-md-3">
-            <label class="form-label" for="celular" >
-                Celular
+        <div class="col-md-2">
+            <label class="form-label" for="complemento" >
+                Complemento
             </label>
 
-            @if ($cliente)
-                <input class="form-control" type="tel" name="celular" id="celular" value="{{$cliente->celular}}" required>
-            @else
-                <input class="form-control" type="tel" name="celular" id="celular" required>
-            @endif
-
+            <input class="form-control" type="text" name="complemento" id="complemento" value="{{ ($clienteEndereco)?$clienteEndereco->complemento : old('complemento') }}">
         </div>
 
-        <div class="col-md-3">
-            <label class="form-label" for="email" >
-                Email
+        <div class="col-md-4">
+            <label class="form-label" for="bairro" >
+                Bairro
             </label>
 
-            @if ($cliente)
-                <input class="form-control" type="email" name="email" id="email" value="{{$cliente->email}}">
-            @else
-                <input class="form-control" type="email" name="email" id="email" value="">
-            @endif
+            <input class="form-control" type="text" name="bairro" id="bairro" value="{{ ($clienteEndereco)?$clienteEndereco->bairro : old('bairro') }}">
+        </div>
 
+        <div class="col-md-4 mt-3">
+            <label class="form-label" for="cidade" >
+                Cidade
+            </label>
+
+            <input class="form-control" type="text" name="cidade" id="cidade" value="{{ ($clienteEndereco)?$clienteEndereco->cidade : old('cidade') }}">
+        </div>
+
+        <div class="col-md-4 mt-3">
+            <label class="form-label" for="uf" >
+                uf
+            </label>
+
+            <input class="form-control" type="text" name="uf" id="uf" value="{{ ($clienteEndereco)?$clienteEndereco->uf : old('uf') }}">
+        </div>
+
+        <div class="col-md-4 mt-3">
+            <label class="form-label" for="cep" >
+                cep
+            </label>
+
+            <input class="form-control" type="text" name="cep" id="cep" value="{{ ($clienteEndereco)?$clienteEndereco->cep : old('cep') }}">
         </div>
 
         <div class="col-12 mt-3">
@@ -67,21 +72,16 @@
                 Observações
             </label>
 
-            @if ($cliente)
-            <textarea class="form-control" name="observacoes" id="observacoes">{!! $cliente->observacoes !!}</textarea>
-            @else
-            <textarea class="form-control" name="observacoes" id="observacoes"></textarea>
-            @endif
-
+            <input class="form-control" type="text" name="observacoes" id="observacoes" value="{{ ($clienteEndereco)?$clienteEndereco->observacoes : old('observacoes') }}">
         </div>
 
     </div>
     <div class="mt-4"></div>
 
-    @if ($cliente)
-        <input class="btn btn-warning" type="submit" value="Atualizar Cliente">
+    @if ($clienteEndereco)
+        <input class="btn btn-warning" type="submit" value="Atualizar Endereco">
     @else
-        <input class="btn btn-success" type="submit" value="Cadastrar Cliente">
+        <input class="btn btn-success" type="submit" value="Cadastrar Endereco">
     @endif
 
 </form>

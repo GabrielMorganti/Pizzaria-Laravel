@@ -54,15 +54,37 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>
-                <a class="btn btn-success" href="#"><i class="bi bi-pencil"></i></a>
-            </td>
+        @forelse ($cliente->enderecocliente()->get() as $item )
+            <tr>
+                <td>
+                    <a class="btn btn-success" href=""><i class="bi bi-pencil"></i></a>
+                </td>
 
-            <td>
-                {{$endereco->cep}}
-            </td>
-        </tr>
+                <td>
+                {{$item->id_cliente_endereco}}
+                </td>
+
+                <td>
+                    {!! $item->endereco->endereco !!}
+                </td>
+
+                <td>
+                    {!! $item->endereco->numero !!}
+                </td>
+
+                <td>
+                    {!! $item->endereco->bairro !!}
+                </td>
+
+                <td>
+                    {!! $item->endereco->cidade !!}
+                </td>
+            </tr>
+        @empty
+            <tr>
+                <td>Não existe endereço definido para esse cliente</td>
+            </tr>
+        @endforelse
     </tbody>
 </table>
 

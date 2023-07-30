@@ -34,10 +34,10 @@ class Endereco extends Model
      * ----------------------------------------------------------------------------------
      */
 
-     public function clientendereco() : object
-     {
-            return $this->belongsTo(ClienteEndereco::class,
-                                    'id_cliente_endereco',
-                                    'id_cliente_endereco');
-     }
+    //  public function clientendereco() : object
+    //  {
+    //         return $this->belongsTo(ClienteEndereco::class,
+    //                                 'id_cliente_endereco',
+    //                                 'id_cliente_endereco');
+    //  }
 }

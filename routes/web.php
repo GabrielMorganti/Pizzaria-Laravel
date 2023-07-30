@@ -112,17 +112,17 @@ Route::middleware('auth')->group(function () {
             Route::get('/{id}','show')->name('cliente.show');
             Route::get('/editar/{id_cliente}','edit')->name('cliente.edit');
 
-            Route::get('endereco/novo/{id_cliente}','create')->name('cliente.createEndereco');
-            Route::get('endereco/{id}','index')->name('cliente.indexEndereco');
-            Route::get('endereco/editar/{id}','edit')->name('cliente.editEndereco');
+            Route::get('endereco/novo/{id_cliente}','createEndereco')->name('cliente.createEndereco');
+            Route::get('endereco/','indexEndereco')->name('cliente.indexEndereco');
+            Route::get('endereco/editar/{id_cliente_endereco}','editEndereco')->name('cliente.editEndereco');
 
             Route::post('/store','store')->name('cliente.store');
             Route::post('/update/{id_cliente}','update')->name('cliente.update');
             Route::post('/destroy/{id_cliente}','destroy')->name('cliente.destroy');
 
-            Route::post('endereco/store','store')->name('cliente.storeEndereco');
-            Route::post('endereco/update','update')->name('cliente.updateEndereco');
-            Route::post('endereco/destroy','destroy')->name('cliente.destroyEndereco');
+            Route::post('endereco/store/{id_cliente}','storeEndereco')->name('cliente.storeEndereco');
+            Route::post('endereco/update','updateEndereco')->name('cliente.updateEndereco');
+            Route::post('endereco/destroy','destroyEndereco')->name('cliente.destroyEndereco');
         });
 
 /**
