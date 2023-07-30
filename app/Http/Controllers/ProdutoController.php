@@ -55,6 +55,8 @@ class ProdutoController extends Controller
         $produto = Produto::find($id);
         $tamanhos = Tamanho::class;
 
+
+
         return view('produto.show')
             ->with(compact(
                 'produto',
@@ -74,8 +76,13 @@ class ProdutoController extends Controller
 
     public function update(Request $request, Int $id)
     {
+
+        
+
         $produto = Produto::find($id);
         $produto->update($request->all());
+
+
         return redirect()
             ->route('produto.show',['id' => $produto->id_produto])
             ->with('success','Atualizado com Sucesso!');
@@ -146,5 +153,35 @@ class ProdutoController extends Controller
             ->with('danger', 'Excluído com Sucesso!');
 
     }
+
+
+    // tipos de tamanho
+
+
+
+    public function storeTipo(Request $request, int $id_produto)
+    {
+        $produtoTamanho = ProdutoTamanho::create([
+            'id_tipo_produto'    => $id_tipo_produto,
+            'tipo'    => $request->tipo,
+
+        ]);
+
+        return redirect()->route('produto.show', ['id' => $id_produto])->with('success', 'Tamanho Cadastrado com Sucesso!');
+    }
+
+
+    public function showTipo(Int $id)
+    {
+        $produto = TipoProduto::find($id);
+        $tipos = TipoProduto::class;
+
+        return view('produto.show')
+            ->with(compact(
+                'produto',
+                'tipo'
+            ));
+    }
+
 }
 
