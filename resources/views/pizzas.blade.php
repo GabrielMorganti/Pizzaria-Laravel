@@ -170,6 +170,14 @@
 <div class="borda"></div>
 {{-- /HEADER --}}
 
+{{-- BANNER --}}
+<div class="container-fluid banner ">
+    <div class="row">
+        <img src="{{ url('img/'.rand(1,10).'.png') }}" alt="">
+    </div>
+</div>
+{{-- /BANNER --}}
+
 <div class="container-fluid content">
     <div class="flex-container">
         <div class="row mt-5">
