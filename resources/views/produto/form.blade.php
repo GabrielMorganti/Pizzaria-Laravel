@@ -18,7 +18,7 @@
 
             <select class="form-select" name="id_tipo_produto" id="id_tipo_produto" required>
                 <option value="">Selecione</option>
-                @foreach ($produto::orderBy('id')->get() as $item)
+                @foreach ($produtos as $item)
 
                 @endforeach
             </select>

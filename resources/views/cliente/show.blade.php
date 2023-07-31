@@ -19,6 +19,7 @@
         <tr>
             <td>
                 <a class="btn btn-success" href="{{route('cliente.edit', ['id_cliente'=>$cliente->id_cliente])}}"><i class="bi bi-pencil"></i></a>
+
             </td>
 
             <td>
@@ -58,6 +59,7 @@
             <tr>
                 <td>
                     <a class="btn btn-success" href=""><i class="bi bi-pencil"></i></a>
+                    <a class="btn btn-warning" href=""><i class="bi bi-trash"></i></a>
                 </td>
 
                 <td>
