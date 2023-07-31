@@ -20,15 +20,39 @@
                 <label class="form-label" for="id_tipo_produto" >
                     tipo
                 </label>
-                <input class="form-control" type="number" name="id" id="id" value="" required>
-            </div>
 
 
-            {{-- <select class="form-select" name="id" id="id" required>
+                {{-- <select class="form-select" name="id_tipo_produto" id="id_tipo_produto" required>
+                    <option value="">Selecione</option>
+                    @foreach ($tiposProduto::orderBy('tipo_produto')->get() as $item)
+                        <option value="{{ $item->id_tipo_produto }}"
+                            @if ($tipoProduto && $tipoProduto->id_tipo_produto == $item->id_tipo_produto)
+                                selected="selected"
+                            @endif
+                        >
+                            {!! $item->tipo !!}
+                        </option>
+                    @endforeach
+                </select> --}}
+
+
+
+                <select class="form-select" name="id_tipo_produto" id="id_tipo_produto" required>
                 <option value="">Selecione</option>
-                @foreach ($produto->tipo('tipo') as $item)
+                @dd($tiposProduto->orderBy('tipo')->get())
+                @foreach ($tiposProduto::orderBy('tipo_produto') as $item)
 
-                @endforeach --}}
+                <option class="" value="{{ $item->id_tipo_produto }}"
+                    @selected(
+                        ($tiposProduto && $tiposProduto->id_tipo_produto == $item->id_tipo_produto)? true
+                        :
+                        false
+                    )
+                    >
+                    {!! $item->tipo_produto !!}
+                </option>
+                @endforeach
+            </select>
             </select>
         </div>
 
@@ -62,7 +86,7 @@
         <input class="btn btn-success" type="submit" value="Cadastrar Produto">
     @endif
 
-    
+
 </form>
 
 @endsection

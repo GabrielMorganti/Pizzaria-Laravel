@@ -18,7 +18,8 @@
         <tr>
             <td>
                 <a class="btn btn-success" href="{{ route('produto.edit', ['id'=>$produto->id_produto]) }}"><i class="bi bi-pencil"></i></a>
-                <a class="btn btn-primary" href="{{ route('produto.show', ['id'=>$produto->id_produto]) }}"><i class="bi bi-eye"></i></a>
+                {{-- <a class="btn btn-primary" href="{{ route('produto.show', ['id'=>$produto->id_produto]) }}"><i class="bi bi-eye"></i></a> --}}
+               <a class="btn btn-primary" href="{{ route('tipo.show', ['id'=>$produto->id_produto]) }}"><i class="bi bi-eye"></i></a>
                 <a class="btn btn-warning" href="{{ route('produto.destroy', ['id'=>$produto->id_produto]) }}"><i class="bi bi-trash3"></i></a>
             </td>
 

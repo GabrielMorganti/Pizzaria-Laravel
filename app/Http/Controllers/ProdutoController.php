@@ -68,6 +68,7 @@ class ProdutoController extends Controller
         $produto = Produto::find($id);
         $tiposProduto = TipoProduto::class;
 
+
         return view('produto.form')
             ->with(compact(
                 'produto',
@@ -77,7 +78,7 @@ class ProdutoController extends Controller
     public function update(Request $request, Int $id)
     {
 
-        
+
 
         $produto = Produto::find($id);
         $produto->update($request->all());
@@ -159,10 +160,22 @@ class ProdutoController extends Controller
 
 
 
+    public function createTipo(int $id_produto)
+    {
+        $produtoTipo = null;
+        $produto = Produto::find($id_produto);
+        $tipos = Tamanho::class;
+
+        return view('produto.form')
+            ->with(compact('tipo'));
+    }
+
+
+
     public function storeTipo(Request $request, int $id_produto)
     {
         $produtoTamanho = ProdutoTamanho::create([
-            'id_tipo_produto'    => $id_tipo_produto,
+            'id_tipo_produto'    => $request->id_tipo_produto,
             'tipo'    => $request->tipo,
 
         ]);
@@ -171,16 +184,37 @@ class ProdutoController extends Controller
     }
 
 
-    public function showTipo(Int $id)
+    public function editTipo(int $id)
     {
-        $produto = TipoProduto::find($id);
-        $tipos = TipoProduto::class;
+        $produtoTipo = TipoProduto::find($id);
+        // $produto   = Produto::find($produtoTamanho->id_produto);
+        $produto   = $produtoTipo->produto();
+        $tipos  = ProdutoTamanho::class;
 
-        return view('produto.show')
-            ->with(compact(
-                'produto',
-                'tipo'
-            ));
+        return view('produto.form')
+            ->with(compact('tipo'));
+    }
+
+    // public function showTipo(Int $id)
+    // {
+    //     $produto = Produto::find($id);
+    //     $tipos = TipoProduto::class;
+
+
+    //     return view('produto.show')
+    //         ->with(compact(
+
+    //             'tipo'
+    //         ));
+    // }
+
+    public function destroyTipo(int $id)
+    {
+        TipoProduto::find($id)->delete();
+        return redirect()
+            ->back()
+            ->with('danger', 'Excluído com Sucesso!');
+
     }
 
 }

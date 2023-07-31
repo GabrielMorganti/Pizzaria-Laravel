@@ -10,6 +10,7 @@ use App\Http\Controllers\
     ProfileController,
     PedidoController,
     ProdutoController,
+    TipoProdutoController,
     ProdutoTamanhoController,
 };
 use App\Models\Cargo;
@@ -123,7 +124,7 @@ Route::middleware('auth')->group(function () {
             Route::post('endereco/update','update')->name('cliente.updateEndereco');
             Route::post('endereco/destroy','destroy')->name('cliente.destroyEndereco');
         });
-        
+
 /**
  * ------------------------
  *        |Endereço|
@@ -188,6 +189,9 @@ Route::middleware('auth')->group(function () {
             Route::post('/tamanho/destroy', 'destroyTamanho')->name('produto.destroyTamanho');
 
         });
+
+
+     
 /**
  * ------------------------
  *   |Produtos Tamanhos|
