@@ -82,6 +82,24 @@ Route::middleware('auth')->group(function () {
 
 /**
  * ------------------------
+ *        |Users|
+ *-------------------------
+ */
+
+ Route::prefix('cargos')
+        ->controller(CargoController::class)
+        ->group(function () {
+            Route::get('/','index')->name('cargo.index');
+            Route::get('/novo','create')->name('cargo.create');
+            Route::get('/{id}','show')->name('cargo.show');
+            Route::get('/editar/{id}','edit')->name('cargo.edit');
+
+            Route::post('/store','store')->name('cargo.store');
+            Route::post('/update','update')->name('cargo.update');
+            Route::post('/destroy/{id}','destroy')->name('cargo.destroy');
+        });
+/**
+ * ------------------------
  *        |Cargos|
  *-------------------------
  */
@@ -113,16 +131,15 @@ Route::middleware('auth')->group(function () {
             Route::get('/editar/{id_cliente}','edit')->name('cliente.edit');
 
             Route::get('endereco/novo/{id_cliente}','createEndereco')->name('cliente.createEndereco');
-            Route::get('endereco/','indexEndereco')->name('cliente.indexEndereco');
-            Route::get('endereco/editar/{id_cliente_endereco}','editEndereco')->name('cliente.editEndereco');
+            Route::get('endereco/editar/{id_endereco}','editEndereco')->name('cliente.editEndereco');
 
             Route::post('/store','store')->name('cliente.store');
             Route::post('/update/{id_cliente}','update')->name('cliente.update');
             Route::post('/destroy/{id_cliente}','destroy')->name('cliente.destroy');
 
-            Route::post('endereco/store/{id_cliente}/{id}','storeEndereco')->name('cliente.storeEndereco');
-            Route::post('endereco/update','updateEndereco')->name('cliente.updateEndereco');
-            Route::post('endereco/destroy/','destroyEndereco')->name('cliente.destroyEndereco');
+            Route::post('endereco/store/{id_cliente}','storeEndereco')->name('cliente.storeEndereco');
+            Route::post('endereco/update{id_endereco}','updateEndereco')->name('cliente.updateEndereco');
+            Route::post('endereco/destroy/{id_endereco}','destroyEndereco')->name('cliente.destroyEndereco');
         });
 
 /**
