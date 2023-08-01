@@ -7,53 +7,38 @@
     }}
 </h1>
 
-<form action="{{ ($produto) ? route('produto.update') : route('produto.store')  }}" method="post" enctype="multipart/form-data">
+<form method="post"
+action="{{ $produto ? route('produto.update', ['id' => $produto->id_produto]) : route('produto.store') }}"
+id="produto-form" enctype="multipart/form-data" class="mt-6">
     @csrf
 
     <div class="row">
-        <div class="col-md-3">
-            <label class="form-label" for="id">
-                Tipo de produto
-            </label>
+
 
             <div class="col-md-3">
-                <label class="form-label" for="id_tipo_produto" >
-                    tipo
+                <label class="form-label" for="id">
+                    Tipo de produto
                 </label>
 
-
-                {{-- <select class="form-select" name="id_tipo_produto" id="id_tipo_produto" required>
-                    <option value="">Selecione</option>
-                    @foreach ($tiposProduto::orderBy('tipo_produto')->get() as $item)
-                        <option value="{{ $item->id_tipo_produto }}"
-                            @if ($tipoProduto && $tipoProduto->id_tipo_produto == $item->id_tipo_produto)
-                                selected="selected"
-                            @endif
-                        >
-                            {!! $item->tipo !!}
-                        </option>
-                    @endforeach
-                </select> --}}
-
-
-
                 <select class="form-select" name="id_tipo_produto" id="id_tipo_produto" required>
-                <option value="">Selecione</option>
-                @dd($tiposProduto->orderBy('tipo')->get())
-                @foreach ($tiposProduto::orderBy('tipo_produto') as $item)
+                    <option value="">Selecione</option>
 
-                <option class="" value="{{ $item->id_tipo_produto }}"
+                    @foreach ($tiposProduto::orderBy('tipo')->get() as $item)
+
+                    <option class="" value="{{ $item->id_tipo_produto }}"
                     @selected(
-                        ($tiposProduto && $tiposProduto->id_tipo_produto == $item->id_tipo_produto)? true
+                        ($produto && $produto->id_tipo_produto == $item->id_tipo_produto)? true
                         :
                         false
                     )
                     >
-                    {!! $item->tipo_produto !!}
+                    {!! $item->tipo !!}
+
+
                 </option>
                 @endforeach
             </select>
-            </select>
+
         </div>
 
         <div class="col-md-3">

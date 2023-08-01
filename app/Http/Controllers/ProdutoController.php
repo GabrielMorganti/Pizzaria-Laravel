@@ -28,6 +28,7 @@ class ProdutoController extends Controller
     public function index()
     {
         $produtos = Produto::orderBy('nome');
+        $tamanhos = Tamanho::class;
         return view('produto.index')->with(compact('produtos'));
     }
 
@@ -35,11 +36,11 @@ class ProdutoController extends Controller
     {
         $produto = null;
         $tiposProduto = TipoProduto::class;
-
         return view('produto.form')
             ->with(compact(
                 'produto',
-                'tiposProduto'));
+                'tiposProduto'
+            ));
     }
 
     public function store(Request $request)
@@ -67,20 +68,18 @@ class ProdutoController extends Controller
     {
         $produto = Produto::find($id);
         $tiposProduto = TipoProduto::class;
-
-
         return view('produto.form')
             ->with(compact(
                 'produto',
                 'tiposProduto'));
     }
 
-    public function update(Request $request, Int $id)
+    public function update(Request $request, Int $id_produto)
     {
 
 
 
-        $produto = Produto::find($id);
+        $produto = Produto::find($id_produto);
         $produto->update($request->all());
 
 
@@ -172,15 +171,24 @@ class ProdutoController extends Controller
 
 
 
-    public function storeTipo(Request $request, int $id_produto)
+    public function storeTipo(Request $request )
     {
-        $produtoTamanho = ProdutoTamanho::create([
-            'id_tipo_produto'    => $request->id_tipo_produto,
-            'tipo'    => $request->tipo,
+
+        $produtoTipo =  TipoProduto::create([
+
+
+
+            'tipo'    => $request->tipo
 
         ]);
 
-        return redirect()->route('produto.show', ['id' => $id_produto])->with('success', 'Tamanho Cadastrado com Sucesso!');
+        // TipoProduto::create($request->all());
+
+        return redirect()
+            ->route('produto.index')
+            ->with('success', 'Cadastrado com Sucesso!');
+
+
     }
 
 

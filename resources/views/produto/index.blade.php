@@ -2,6 +2,35 @@
 @section('contentadm')
 
 <h1>Produtos</h1>
+
+<div class="row">
+<div class="col-9 mt-3">
+    <a href="{{route('produto.create')}}" class="btn btn-primary">
+        Novo Produto
+    </a>
+</div>
+
+
+<div class="col-3 mt-4">
+
+<form action="{{ route('produto.storeTipo') }}" method="post" enctype="multipart/form-data">
+
+     @csrf
+        <label for="" class="">
+
+            Criar novo tipo de produto
+
+
+        <input type="text" class="form-control mb-2" name="tipo" id="tipo">
+
+        </label>
+        <input type="submit" class=" btn btn-primary" value="Criar">
+        </div>
+
+    </div>
+
+</form>
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -19,7 +48,7 @@
             <td>
                 <a class="btn btn-success" href="{{ route('produto.edit', ['id'=>$produto->id_produto]) }}"><i class="bi bi-pencil"></i></a>
                 {{-- <a class="btn btn-primary" href="{{ route('produto.show', ['id'=>$produto->id_produto]) }}"><i class="bi bi-eye"></i></a> --}}
-               <a class="btn btn-primary" href="{{ route('tipo.show', ['id'=>$produto->id_produto]) }}"><i class="bi bi-eye"></i></a>
+               <a class="btn btn-primary" href="{{ route('produto.show', ['id'=>$produto->id_produto]) }}"><i class="bi bi-eye"></i></a>
                 <a class="btn btn-warning" href="{{ route('produto.destroy', ['id'=>$produto->id_produto]) }}"><i class="bi bi-trash3"></i></a>
             </td>
 

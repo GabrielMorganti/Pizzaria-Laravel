@@ -14,6 +14,7 @@ use App\Http\Controllers\
     ProdutoTamanhoController,
 };
 use App\Models\Cargo;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -170,10 +171,17 @@ Route::middleware('auth')->group(function () {
  Route::prefix('produtos')
         ->controller(ProdutoController::class)
         ->group(function () {
+
+
             Route::get('/','index')->name('produto.index');
             Route::get('/novo','create')->name('produto.create');
             Route::get('/{id}','show')->name('produto.show');
             Route::get('/editar/{id}','edit')->name('produto.edit');
+
+
+
+
+
 
 
             Route::get('/tamanho/{id_produto}','createTamanho')->name('produto.createTamanho');
@@ -181,17 +189,21 @@ Route::middleware('auth')->group(function () {
 
 
             Route::post('/store','store')->name('produto.store');
-            Route::post('/update','update')->name('produto.update');
+            Route::post('/update/{id_produto}','update')->name('produto.update');
             Route::post('/destroy','destroy')->name('produto.destroy');
 
             Route::post('/tamanho/store/{id_produto}', 'storeTamanho')->name('produto.storeTamanho');
             Route::post('/tamanho/update', 'updateTamanho')->name('produto.updateTamanho');
             Route::post('/tamanho/destroy', 'destroyTamanho')->name('produto.destroyTamanho');
 
+            Route::get('/tipo/novo','createTipo')->name('produto.createTipo');
+            Route::get('/tipo/editar/{id}','editarTipo')->name('produto.editTipo');
+            Route::post('/tipo/store','storeTipo')->name('produto.storeTipo');
+
         });
 
 
-     
+
 /**
  * ------------------------
  *   |Produtos Tamanhos|
