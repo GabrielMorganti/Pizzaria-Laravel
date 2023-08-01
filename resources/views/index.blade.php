@@ -173,7 +173,7 @@
 {{-- BANNER --}}
 <div class="container-fluid banner ">
     <div class="row">
-        <img src="{{ url('img/'.rand(1,10).'.png') }}" alt="">
+        <img src="{{ url('img/'.rand(1,11).'.png') }}" alt="">
     </div>
 </div>
 {{-- /BANNER --}}
@@ -266,6 +266,7 @@
         <div class="col-md-3">
             <button onclick="leiaMais()" id="btnLeiaMais" class="btn btnLeiaMais mt-4 botao">Ver Mais</button>
         </div>
+
     </div>
 
 
@@ -313,6 +314,20 @@
         <div class="col-md-3">
             <a class="btn mt-4 botao" href="http://127.0.0.1:8000/cardapio">Ver Mais</a>
         </div>
+    </div>
+
+    <div class="row mt-5">
+        <h1>Entrega e Retirada</h1>
+
+        <h3 class="mt-3"><span><i class="bi bi-bicycle"></span></i>Entrega 60 min </h3>
+        <h3 class="mt-3"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 3h8l-1 9h-6z" />
+            <path d="M7 18h2v3h-2z" />
+            <path d="M20 3v12h-5c-.023 -3.681 .184 -7.406 5 -12z" />
+            <path d="M20 15v6h-1v-3" />
+            <path d="M8 12l0 6" />
+          </svg>Retirada 35 Min</h3>
     </div>
 </div>
 
@@ -379,13 +394,10 @@
 
 </div>
 <div class="container-fluid">
-    <div class="row mt-5">
-        <h1>Informações Sobre Entrega e Retirada</h1>
-    </div>
 
-    <div class="row mt-5 promocao">
+    <div class="row mt-5 promocao mb-5">
         <h2 class="">
-            Avaliações:
+            Avaliação dos Clientes:
         </h2>
         <div class="d-none d-md-block d-xl-block">
             <div class="flex-container">
