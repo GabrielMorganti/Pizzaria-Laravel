@@ -19,7 +19,6 @@
         <tr>
             <td>
                 <a class="btn btn-success" href="{{route('cliente.edit', ['id_cliente'=>$cliente->id_cliente])}}"><i class="bi bi-pencil"></i></a>
-
             </td>
 
             <td>

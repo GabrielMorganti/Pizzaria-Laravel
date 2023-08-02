@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreClienteRequest;
+use App\Http\Requests\UpdateClienteRequest;
 
 use App\Models\{
     Cliente,
@@ -55,8 +57,6 @@ class ClienteController extends Controller
         return view('cliente.show')
             ->with(compact(
                 'cliente',
-                'enderecos',
-                '$clienteEndereco'
             ));
     }
 
@@ -144,16 +144,15 @@ class ClienteController extends Controller
     public function updateEndereco(Request $request, int $id)
     {
         $clienteEndereco = ClienteEndereco::find($id);
-        $cliente = $clienteEndereco->cliente();
         $clienteEndereco->update($request->all());
+        $cliente = Cliente::all();
 
-        return view('cliente.show', ['id' => $clienteEndereco->id_cliente])
-            ->with('success', 'Atualizado com sucesso');
+        return redirect()->route('cliente.show', ['id' => $clienteEndereco->id_cliente])->with(compact('cliente'), 'success', 'Endereço Cadastrado com Sucesso!');
     }
 
-    public function destroyEndereco(int $id)
+    public function destroyEndereco(int $id_endereco)
     {
-        Endereco::find($id)->delete();
+        Endereco::find($id_endereco)->delete();
         return redirect()
             ->back()
             ->with('danger', 'Excluído com Sucesso!');

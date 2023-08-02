@@ -138,7 +138,7 @@ Route::middleware('auth')->group(function () {
             Route::post('/destroy/{id_cliente}','destroy')->name('cliente.destroy');
 
             Route::post('endereco/store/{id_cliente}','storeEndereco')->name('cliente.storeEndereco');
-            Route::post('endereco/update','updateEndereco')->name('cliente.updateEndereco');
+            Route::post('endereco/update/{id}','updateEndereco')->name('cliente.updateEndereco');
             Route::post('endereco/destroy/{id_endereco}','destroyEndereco')->name('cliente.destroyEndereco');
         });
 
@@ -197,8 +197,13 @@ Route::middleware('auth')->group(function () {
             Route::get('/tamanho/editar/{id}','editarTamanho')->name('produto.editTamanho');
 
 
+            Route::get('/tipo/novo','createTipo')->name('produto.createTipo');
+            Route::get('/tipo/editar/{id}','editarTipo')->name('produto.editTipo');
+            Route::post('/tipo/store','storeTipo')->name('produto.storeTipo');
+
+
             Route::post('/store','store')->name('produto.store');
-            Route::post('/update','update')->name('produto.update');
+            Route::post('/update/{id}','update')->name('produto.update');
             Route::post('/destroy','destroy')->name('produto.destroy');
 
             Route::post('/tamanho/store/{id_produto}', 'storeTamanho')->name('produto.storeTamanho');
@@ -206,6 +211,7 @@ Route::middleware('auth')->group(function () {
             Route::post('/tamanho/destroy', 'destroyTamanho')->name('produto.destroyTamanho');
 
         });
+
 /**
  * ------------------------
  *   |Produtos Tamanhos|
