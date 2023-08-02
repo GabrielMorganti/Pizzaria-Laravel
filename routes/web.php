@@ -175,7 +175,7 @@ Route::middleware('auth')->group(function () {
 
             Route::get('/','index')->name('produto.index');
             Route::get('/novo','create')->name('produto.create');
-            Route::get('/{id}','show')->name('produto.show');
+            Route::get('show/{id}','show')->name('produto.show');
             Route::get('/editar/{id}','edit')->name('produto.edit');
 
 
@@ -220,7 +220,7 @@ Route::middleware('auth')->group(function () {
 
             Route::post('/store','store')->name('tamanho.store');
             Route::post('/update','update')->name('tamanho.update');
-            Route::post('/destroy','destroy')->name('tamanho.destroy');
+            Route::post('/destroy/','destroy')->name('tamanho.destroy');
         });
 
 

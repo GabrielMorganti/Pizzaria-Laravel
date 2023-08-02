@@ -1,6 +1,9 @@
 @extends('layouts.baseadm')
 @section('contentadm')
 
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+
 <h1>Produtos</h1>
 
 <div class="row">
@@ -39,6 +42,7 @@
             <th>Produto</th>
             <th>Observações</th>
             <th>Qtd Tamanhos</th>
+            <th>Foto</th>
         </tr>
     </thead>
     <tbody>
@@ -46,10 +50,15 @@
 
         <tr>
             <td>
-                <a class="btn btn-success" href="{{ route('produto.edit', ['id'=>$produto->id_produto]) }}"><i class="bi bi-pencil"></i></a>
+                <a class="btn btn-success" href="{{ route('produto.edit', ['id'=>$produto->id_produto]) }}" ><i class="bi bi-pencil"  ></i></a>
                 {{-- <a class="btn btn-primary" href="{{ route('produto.show', ['id'=>$produto->id_produto]) }}"><i class="bi bi-eye"></i></a> --}}
-               <a class="btn btn-primary" href="{{ route('produto.show', ['id'=>$produto->id_produto]) }}"><i class="bi bi-eye"></i></a>
-                <a class="btn btn-warning" href="{{ route('produto.destroy', ['id'=>$produto->id_produto]) }}"><i class="bi bi-trash3"></i></a>
+               <a class="btn btn-primary" href="{{ route('produto.show', ['id'=>$produto->id_produto]) }} " ><i class="bi bi-eye"></i></a>
+
+
+                <form action="{{route('produto.destroy')}}" method="POST"></form>
+               <a class="btn btn-warning" href="{{ route('produto.destroy', ['id'=>$produto->id_produto]) }}" onclick=" return confirm('tem certeza que deseja excluir?')" ><i class="bi bi-trash3"></i></a>
+
+
             </td>
 
             <td>{{$produto->id_produto}}</td>
@@ -58,14 +67,27 @@
 
             <td>{{ nl2br($produto->observacoes)}}</td>
             <td>{!! $produto->tamanhos()->count() !!}</td>
+
+            <td>
+                @if ($produto->foto)
+                        <br>
+                        <img src="{{ url('storage/' . $produto->foto) }}" class="img-thumbnail" width="250">
+                        @endif
+            </td>
         </tr>
         @endforeach
     </tbody>
 </table>
 
-@endsection
 
-{{-- Script --}}
-@section('scripts')
+
+
+
+
+
+
+
+
+
 
 @endsection

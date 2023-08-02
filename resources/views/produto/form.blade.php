@@ -8,7 +8,7 @@
 </h1>
 
 <form method="post"
-action="{{ $produto ? route('produto.update', ['id' => $produto->id_produto]) : route('produto.store') }}"
+action="{{ $produto ? route('produto.update', ['id_produto' => $produto->id_produto]) : route('produto.store') }}"
 id="produto-form" enctype="multipart/form-data" class="mt-6">
     @csrf
 
@@ -55,6 +55,11 @@ id="produto-form" enctype="multipart/form-data" class="mt-6">
             <input class="form-control"  name="observacoes" id="observacoes" value="">
         </div>
 
+        <div class="col-md-4">
+            <label for="foto" class="form-label">Foto</label>
+            <input class="form-control" type="file" name="foto" id="foto">
+        </div>
+
         <div class="col-12 mt-3">
             <label class="form-label" for="descricao">
                 Descriçao
@@ -67,6 +72,8 @@ id="produto-form" enctype="multipart/form-data" class="mt-6">
 
     @if ($produto)
         <input class="btn btn-warning" type="submit" value="Atualizar Produto">
+
+        <a class="btn btn-warning" href="{{ route('produto.destroy') }}" onclick=" return confirm('tem certeza que deseja excluir?')" ><i class="bi bi-trash3"></i></a>
     @else
         <input class="btn btn-success" type="submit" value="Cadastrar Produto">
     @endif

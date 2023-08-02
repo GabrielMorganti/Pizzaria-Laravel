@@ -6,7 +6,13 @@
 
     <div class="mt-3"></div>
     <h1> Produto: {{ $produto->nome }}</h1>
-    <h2> Tipo: {{ $produto->tipo->tipo_produto }}</h2>
+    <h2> Tipo: {{ $produto->tipo->tipo }}</h2>
+    @if ($produto->foto)
+    <p>
+        <img src="{{ url('storage/' . $produto->foto) }}" class="img-thumbnail img-fluid" width="200">
+    </p>
+
+@endif
     <p> Descrição: {!! nl2br($produto->descricao) !!}</p>
 
     @if ($produto->observacoes)
