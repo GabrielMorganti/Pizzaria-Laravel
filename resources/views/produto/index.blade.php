@@ -8,7 +8,16 @@
         Novo Produto
     </a>
 </h1>
-<p>{{ $produtos->onEachSide(5)->links() }}</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p>{{ $produtos->onEachSide(5)->links() }}
+            </p>
+        </div>
+    </div>
+</div>
+
 {{-- Alerts --}}
 @include('layouts.partials.alerts')
 <table class="table table-striped table-hover">
