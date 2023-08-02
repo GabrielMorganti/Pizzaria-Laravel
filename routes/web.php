@@ -138,7 +138,7 @@ Route::middleware('auth')->group(function () {
             Route::post('/destroy/{id_cliente}','destroy')->name('cliente.destroy');
 
             Route::post('endereco/store/{id_cliente}','storeEndereco')->name('cliente.storeEndereco');
-            Route::post('endereco/update{id_endereco}','updateEndereco')->name('cliente.updateEndereco');
+            Route::post('endereco/update','updateEndereco')->name('cliente.updateEndereco');
             Route::post('endereco/destroy/{id_endereco}','destroyEndereco')->name('cliente.destroyEndereco');
         });
 

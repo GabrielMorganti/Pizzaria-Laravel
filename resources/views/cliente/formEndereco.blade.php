@@ -5,12 +5,7 @@
     </h1>
 
     <form
-        action="{{ $clienteEndereco
-        ?
-        route('cliente.updateEndereco', ['id_endereco' => $clienteEndereco->id_endereco])
-        :
-        route('cliente.storeEndereco', ['id_cliente' =>  $clienteEndereco->cliente->id_cliente]) }}"
-        method="post" enctype="multipart/form-data">
+        action="{{ $clienteEndereco ? route('cliente.updateEndereco') : route('cliente.storeEndereco', ['id_cliente' =>  $cliente->id_cliente]) }}" method="post" enctype="multipart/form-data">
         @csrf
 
         <div class="row">

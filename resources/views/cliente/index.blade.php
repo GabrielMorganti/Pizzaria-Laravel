@@ -5,6 +5,8 @@
 <h6>
     <a class="btn btn-primary" href="{{ route('cliente.create')}}">Cadastrar novo Cliente</a>
 </h6>
+ {{-- <p>{{ $clientes->get()->onEachSide(5)->links() }}</p> --}}
+
 <table class="table table-striped">
     <thead>
         <tr>

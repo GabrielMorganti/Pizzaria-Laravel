@@ -31,7 +31,7 @@
             @forelse ($produto->tamanhos()->get() as $item)
                 <tr>
                     <td>
-                        <a class="btn btn-success" href="{{ route('produto.editTamanho', ['id' =>$produtoTamanho->id_produto_tamanho])}}"><i class="bi bi-pencil"></i></a>
+                        <a class="btn btn-success" href=""><i class="bi bi-pencil"></i></a>
                     </td>
 
                     <td>

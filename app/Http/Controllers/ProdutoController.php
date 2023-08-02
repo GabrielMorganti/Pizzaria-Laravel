@@ -130,6 +130,7 @@ class ProdutoController extends Controller
 
     public function updateTamanho(Request $request, int $id)
     {
+
         $produtoTamanho = ProdutoTamanho::find($id);
         $produtoTamanho->update($request->all());
 

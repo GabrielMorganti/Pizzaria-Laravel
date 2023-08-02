@@ -17,7 +17,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::orderBy('nome');//->paginate(13);
+        $clientes = Cliente::orderBy('nome');//->paginate(10);
+
         return view('cliente.index')->with(compact('clientes'));
     }
 
@@ -54,6 +55,8 @@ class ClienteController extends Controller
         return view('cliente.show')
             ->with(compact(
                 'cliente',
+                'enderecos',
+                '$clienteEndereco'
             ));
     }
 
@@ -141,10 +144,10 @@ class ClienteController extends Controller
     public function updateEndereco(Request $request, int $id)
     {
         $clienteEndereco = ClienteEndereco::find($id);
+        $cliente = $clienteEndereco->cliente();
         $clienteEndereco->update($request->all());
 
-        return redirect()
-            ->route('cliente.show', ['id' => $clienteEndereco->id_cliente])
+        return view('cliente.show', ['id' => $clienteEndereco->id_cliente])
             ->with('success', 'Atualizado com sucesso');
     }
 
