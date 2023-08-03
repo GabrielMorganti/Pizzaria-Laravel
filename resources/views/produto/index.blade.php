@@ -15,8 +15,27 @@
             <p>{{ $produtos->onEachSide(5)->links() }}
             </p>
         </div>
+        <div class="col-3 mt-4">
+
+            <form action="{{ route('produto.storeTipo') }}" method="post" enctype="multipart/form-data">
+
+                 @csrf
+                    <label for="" class="">
+
+                        Criar novo tipo de produto
+
+
+                    <input type="text" class="form-control mb-2" name="tipo" id="tipo">
+
+                    </label>
+                    <input type="submit" class=" btn btn-primary" value="Criar">
+
+                </div>
+
+            </form>
     </div>
 </div>
+
 
 {{-- Alerts --}}
 @include('layouts.partials.alerts')
@@ -62,7 +81,7 @@
                     {{ $produto->nome }}
                     @if ($produto->foto)
                     <br>
-                    <img src="{{ url('storage/' . $produto->foto) }}" class="img-thumbnail" width="250">
+                    <img src="{{ url('storage/fotos/' . $produto->foto) }}" class="img-thumbnail" width="250">
                     @endif
                 </td>
                 <td>{{ nl2br($produto->observacoes) }}</td>

@@ -50,6 +50,11 @@
                             <input class="form-control" type="file" name="foto" id="foto">
                         </div>
 
+                        <div class="col-md-6">
+                            <label for="descricao">Descrição</label>
+                            <input class="form-control" type="text" name="descricao" id="descricao" value="{!! $produto ? $produto->descricao : old('descricao') !!}" placeholder="Ex.: Ingredientes do produto">
+                        </div>
+
                         <div class="col-12 mt-2">
                             <label for="observacoes" class="form-label">Observações</label>
                             <textarea name="observacoes" id="observacoes" class="form-control">{!! $produto != null ? $produto->observacoes : old('observacoes') !!}</textarea>

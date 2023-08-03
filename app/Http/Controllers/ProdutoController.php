@@ -180,4 +180,77 @@ class ProdutoController extends Controller
             ->back()
             ->with('danger', 'Removido com sucesso!');
     }
+
+     /*
+    *|--------------------------------------------
+    *| Tipos de Produtos
+    *|--------------------------------------------
+    */
+
+
+    public function createTipo(int $id_produto)
+    {
+        $produtoTipo = null;
+        $produto = Produto::find($id_produto);
+        $tipos = Tamanho::class;
+
+        return view('produto.form')
+            ->with(compact('tipo'));
+    }
+
+
+
+    public function storeTipo(Request $request )
+    {
+
+        $produtoTipo =  TipoProduto::create([
+
+
+
+            'tipo'    => $request->tipo
+
+        ]);
+
+        // TipoProduto::create($request->all());
+
+        return redirect()
+            ->route('produto.index')
+            ->with('success', 'Cadastrado com Sucesso!');
+
+
+    }
+
+
+    public function editTipo(int $id)
+    {
+        $produtoTipo = TipoProduto::find($id);
+        // $produto   = Produto::find($produtoTamanho->id_produto);
+        $produto   = $produtoTipo->produto();
+        $tipos  = ProdutoTamanho::class;
+
+        return view('produto.form')
+            ->with(compact('tipo'));
+    }
+
+    // public function showTipo(Int $id)
+    // {
+    //     $produto = Produto::find($id);
+    //     $tipos = TipoProduto::class;
+
+
+    //     return view('produto.show')
+    //         ->with(compact(
+
+    //             'tipo'
+    //         ));
+    // }
+
+    public function destroyTipo(int $id)
+    {
+        TipoProduto::find($id)->delete();
+        return redirect()
+            ->back()
+            ->with('danger', 'Excluído com Sucesso!');
+
+    }
 }
