@@ -11,8 +11,10 @@ use App\Http\Controllers\
     PedidoController,
     ProdutoController,
     ProdutoTamanhoController,
+    UserController,
 };
 use App\Models\Cargo;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,17 +88,18 @@ Route::middleware('auth')->group(function () {
  *-------------------------
  */
 
- Route::prefix('cargos')
-        ->controller(CargoController::class)
+ Route::prefix('user')
+        ->controller(UserController::class)
         ->group(function () {
-            Route::get('/','index')->name('cargo.index');
-            Route::get('/novo','create')->name('cargo.create');
-            Route::get('/{id}','show')->name('cargo.show');
-            Route::get('/editar/{id}','edit')->name('cargo.edit');
-
-            Route::post('/store','store')->name('cargo.store');
-            Route::post('/update','update')->name('cargo.update');
-            Route::post('/destroy/{id}','destroy')->name('cargo.destroy');
+            Route::get('/','index')->name('user.index');
+            Route::get('/novo','create')->name('user.create');
+            Route::get('/{id}','show')->name('user.show');
+            Route::get('/editar/{id}','edit')->name('user.edit');
+            Route::get('/{id}','show')->name('user.show');
+            
+            Route::post('/store','store')->name('user.store');
+            Route::post('/update','update')->name('user.update');
+            Route::delete('/destroy/{id}','destroy')->name('user.destroy');
         });
 /**
  * ------------------------
@@ -114,7 +117,16 @@ Route::middleware('auth')->group(function () {
 
             Route::post('/store','store')->name('cargo.store');
             Route::post('/update','update')->name('cargo.update');
-            Route::post('/destroy/{id}','destroy')->name('cargo.destroy');
+            Route::delete('/destroy/{id}','destroy')->name('cargo.destroy');
+
+            // Route::get('/usuario/{id}','show')->name('cargo.showUser');
+
+            // Route::get('/usuario/{id}','createUser')->name('cargo.createUser');
+            // Route::get('/usuario/editar/{id}','editarUser')->name('cargo.editUser');
+
+            // Route::post('/usuario/store','store')->name('cargo.storeUser');
+            // Route::post('/usuario/update','update')->name('cargo.updateUser');
+            // Route::delete('/usuario/destroy/{id}','destroy')->name('cargo.destroyUser');
         });
 /**
  * ------------------------
@@ -133,9 +145,10 @@ Route::middleware('auth')->group(function () {
             Route::get('endereco/novo/{id_cliente}','createEndereco')->name('cliente.createEndereco');
             Route::get('endereco/editar/{id_endereco}','editEndereco')->name('cliente.editEndereco');
 
-            Route::post('/store','store')->name('cliente.store');
-            Route::post('/update/{id_cliente}','update')->name('cliente.update');
-            Route::post('/destroy/{id_cliente}','destroy')->name('cliente.destroy');
+            Route::post('cliente/store','store')->name('cliente.store');
+            Route::post('cliente/update/{id_cliente}','update')->name('cliente.update');
+            Route::delete('cliente/destroy/{id}','destroy')->name('cliente.destroy');
+
 
             Route::post('endereco/store/{id_cliente}','storeEndereco')->name('cliente.storeEndereco');
             Route::post('endereco/update/{id_cliente}/{id_endereco}','updateEndereco')->name('cliente.updateEndereco');
@@ -206,7 +219,7 @@ Route::middleware('auth')->group(function () {
 
             Route::post('/store','store')->name('produto.store');
             Route::post('/update/{id}','update')->name('produto.update');
-            Route::post('/destroy','destroy')->name('produto.destroy');
+            Route::delete('/destroy/{id}','destroy')->name('produto.destroy');
 
             Route::post('/tamanho/store/{id_produto}', 'storeTamanho')->name('produto.storeTamanho');
             Route::post('/tamanho/update', 'updateTamanho')->name('produto.updateTamanho');
