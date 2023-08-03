@@ -102,9 +102,9 @@ class ProdutoController extends Controller
             ->with('success','Atualizado com Sucesso!');
     }
 
-    public function destroy(Int $id)
+    public function destroy(Int $id_produto)
     {
-        Produto::find($id)->delete();
+        Produto::find($id_produto)->delete();
         return redirect()
             ->back()
             ->with('danger', 'Excluído com Sucesso!');

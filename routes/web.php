@@ -220,7 +220,7 @@ Route::middleware('auth')->group(function () {
 
             Route::post('/store','store')->name('tamanho.store');
             Route::post('/update','update')->name('tamanho.update');
-            Route::post('/destroy/','destroy')->name('tamanho.destroy');
+            Route::post('/destroy','destroy')->name('tamanho.destroy');
         });
 
 

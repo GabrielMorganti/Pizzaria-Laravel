@@ -55,7 +55,7 @@
                <a class="btn btn-primary" href="{{ route('produto.show', ['id'=>$produto->id_produto]) }} " ><i class="bi bi-eye"></i></a>
 
 
-                <form action="{{route('produto.destroy')}}" method="POST"></form>
+
                <a class="btn btn-warning" href="{{ route('produto.destroy', ['id'=>$produto->id_produto]) }}" onclick=" return confirm('tem certeza que deseja excluir?')" ><i class="bi bi-trash3"></i></a>
 
 
