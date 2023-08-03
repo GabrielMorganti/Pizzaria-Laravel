@@ -212,11 +212,7 @@ Route::middleware('auth')->group(function () {
 
 
             Route::post('/store','store')->name('produto.store');
-<<<<<<< HEAD
             Route::post('/update/{id_produto}','update')->name('produto.update');
-=======
-            Route::post('/update/{id}','update')->name('produto.update');
->>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
             Route::post('/destroy','destroy')->name('produto.destroy');
 
             Route::post('/tamanho/store/{id_produto}', 'storeTamanho')->name('produto.storeTamanho');
@@ -229,11 +225,8 @@ Route::middleware('auth')->group(function () {
 
         });
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
 /**
  * ------------------------
  *   |Produtos Tamanhos|
