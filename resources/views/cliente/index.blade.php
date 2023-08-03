@@ -23,7 +23,13 @@
             <td>
                 <a class="btn btn-success" href="{{route('cliente.edit', ['id_cliente'=>$cliente->id_cliente])}}"><i class="bi bi-pencil"></i></a>
                 <a class="btn btn-primary" href="{{ route('cliente.show', ['id'=>$cliente->id_cliente])}}"><i class="bi bi-eye"></i></a>
-                <a class="btn btn-warning" href="{{ route('cliente.destroy', ['id_cliente'=>$cliente->id_cliente])}}"><i class="bi bi-trash3"></i></a>
+
+                <form action="{{ route('cliente.destroy',['id'=>$cliente->id_cliente])}}" method="post">
+                    @csrf
+                    @method('delete')
+                    <button class=" btn btn-danger" onclick=" return confirm('tem certeza que deseja excluir?')" ><i class="fa-solid fa-trash-can"></i></button>
+                    </form>
+
             </td>
 
             <td>{{$cliente->id_cliente}}</td>

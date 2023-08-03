@@ -44,7 +44,7 @@
                         </a>
                     </td>
                     <td>
-                        {{-- {!! $item->tamanho->tamanho !!} --}}
+                        {!! $item->tamanho->tamanho !!}
                     </td>
                     <td>
                         {{ $item->preco }}

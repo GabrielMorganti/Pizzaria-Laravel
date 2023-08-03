@@ -29,6 +29,7 @@ class CargoController extends Controller
     {
        // $cargos = Cargo::all('cargo');
         $cargos = Cargo::orderBy('cargo')->get();
+        // $users = User::orderBy('user')->get();
         return view('cargo.index')->with(compact('cargos'));
     }
 
@@ -56,6 +57,7 @@ class CargoController extends Controller
     public function show(Int $id)
     {
         $cargo = Cargo::find($id);
+
         return view('cargo.show')->with(compact('cargo'));
     }
 
@@ -91,4 +93,84 @@ class CargoController extends Controller
                     ->back()
                     ->with('danger', 'Excluído com Sucesso!');
     }
+
+
+
+//-------------------------------------------------------------------------//
+//               USERS
+//-------------------------------------------------------------------------//
+
+
+
+// public function indexUser()
+// {
+//    // $cargos = Cargo::all('cargo');
+//    $user = User::where('id_user');
+//     $users = User::orderBy('user')->get();
+//     return view('user.index')->with(compact('users'));
+// }
+
+// /**
+//  * Show the form for creating a new resource.
+//  */
+// public function createUser()
+// {
+//     $user = null ;
+//     return view('user.form')->with(compact('user'));
+// }
+
+// /**
+//  * Store a newly created resource in storage.
+//  */
+// public function userStore(Request $request)
+// {
+//     $user = User::create($request->all());
+//     return redirect()->route('user.index')->with('success','Cadastrado com Sucesso!');
+// }
+
+// /**
+//  * Display the specified resource.
+//  */
+// public function userShow(Int $id)
+// {
+//     $user = User::find($id);
+//     return view('user.show')->with(compact('user'));
+// }
+
+// /**
+//  * Show the form for editing the specified resource.
+//  */
+// public function userEdit(Int $id)
+// {
+//     $user = User::find($id);
+//     return view('user.form')->with(compact('user'));
+
+// }
+
+// /**
+//  * Update the specified resource in storage.
+//  */
+// public function userUpdate(Request $request, Int $id)
+// {
+//     $user = User::find($id);
+//     $user->update($request->all());
+//     return redirect()->route('user.index')->with('success', 'Atualizado com Sucesso!');
+
+
+// }
+
+// /**
+//  * Remove the specified resource from storage.
+//  */
+// public function userDestroy(Int $id)
+// {
+//     User::find($id)->delete();
+//     return redirect()
+//                 ->back()
+//                 ->with('danger', 'Excluído com Sucesso!');
+// }
+
+
+
+
 }
