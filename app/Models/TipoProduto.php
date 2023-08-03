@@ -21,4 +21,10 @@ class TipoProduto extends Model
     protected $fillable = [
         'tipo'
     ];
+
+    public function produto() : object {
+        return $this->hasOne(Produto::class,
+                                'id_produto',
+                                'id_produto');
+    }
 }

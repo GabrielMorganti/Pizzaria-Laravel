@@ -179,7 +179,7 @@
 {{-- BANNER --}}
 <div class="container-fluid banner ">
     <div class="row">
-        <img src="{{ url('img/'.rand(1,7).'.png') }}" alt="">
+        <img src="{{ url('img/'.rand(1,11).'.png') }}" alt="">
     </div>
 </div>
 {{-- /BANNER --}}
@@ -269,7 +269,7 @@
                 <div class="container text-center">
                     <div class="row align-items-start">
                         <div class="col">
-                            <img src="./img/batata.png" alt="" width="100%">
+                            <img src="" alt="" width="100%">
                         </div>
                         <div class="col">
                             <h3 class="text-start">Porção de Fritas</h3>

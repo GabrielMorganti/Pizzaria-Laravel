@@ -138,7 +138,7 @@ Route::middleware('auth')->group(function () {
             Route::post('/destroy/{id_cliente}','destroy')->name('cliente.destroy');
 
             Route::post('endereco/store/{id_cliente}','storeEndereco')->name('cliente.storeEndereco');
-            Route::post('endereco/update/{id}','updateEndereco')->name('cliente.updateEndereco');
+            Route::post('endereco/update/{id_cliente}/{id_endereco}','updateEndereco')->name('cliente.updateEndereco');
             Route::post('endereco/destroy/{id_endereco}','destroyEndereco')->name('cliente.destroyEndereco');
         });
 
@@ -191,6 +191,8 @@ Route::middleware('auth')->group(function () {
             Route::get('/novo','create')->name('produto.create');
             Route::get('/{id}','show')->name('produto.show');
             Route::get('/editar/{id}','edit')->name('produto.edit');
+            Route::get('/mostrarTipo/{id_tipo_produto}','indexTipo')->name('produto.indexTipo');
+
 
 
             Route::get('/tamanho/{id_produto}','createTamanho')->name('produto.createTamanho');

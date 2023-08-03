@@ -141,13 +141,17 @@ class ClienteController extends Controller
             ->with(compact('enderecos','clienteEndereco'));
     }
 
-    public function updateEndereco(Request $request, int $id)
+    public function updateEndereco(Request $request, int $id_cliente ,int $id_endereco)
     {
-        $clienteEndereco = ClienteEndereco::find($id);
-        $clienteEndereco->update($request->all());
-        $cliente = Cliente::all();
+        $clienteEndereco = ClienteEndereco::where('id_cliente', $id_cliente)->where('id_endereco', $id_endereco)
+        ->first();
 
-        return redirect()->route('cliente.show', ['id' => $clienteEndereco->id_cliente])->with(compact('cliente'), 'success', 'Endereço Cadastrado com Sucesso!');
+        $endereco = Endereco::find($id_endereco);
+        $endereco->update($request->all());
+
+        return redirect()->route('cliente.show' , ['id' => $clienteEndereco->cliente->id_cliente])
+        ->with('success', 'Atualizado com Sucesso!');
+
     }
 
     public function destroyEndereco(int $id_endereco)

@@ -10,7 +10,7 @@ class Tamanho extends Model
     use SoftDeletes;
 
     protected $table = 'tamanhos';
-    protected $primaryKey = 'id_tipo_produto';
+    protected $primaryKey = 'id_tamanho';
     protected $dates = [
         'created_at',
         'updated_at',

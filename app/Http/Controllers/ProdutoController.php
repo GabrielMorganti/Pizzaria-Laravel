@@ -23,6 +23,16 @@ class ProdutoController extends Controller
             ->with(compact('produtos'));
     }
 
+    public function indexTipo(int $id_tipo_produto)
+    {
+        $produtos = Produto::where('id_tipo_produto', $id_tipo_produto)->orderBy('nome');
+        $tiposProdutos = TipoProduto::find($id_tipo_produto);
+        $produtosTamanho = ProdutoTamanho::class;
+
+        return view('produto.mostrarTipo')
+            ->with(compact('produtos', 'tiposProdutos', 'produtosTamanho'));
+    }
+
 
     public function create()
     {

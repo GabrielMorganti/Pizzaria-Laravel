@@ -56,7 +56,7 @@
                     <div class="col-md-4 mt-5 logo-footer">
                         <div class="footer-img mb-4">
                             <a class="" href="http://127.0.0.1:8000"><img class="footer-img"
-                                    src="img/logo2.png" alt="">
+                                    src="{{ url('img/logo2.png')}}" alt="">
                             </a>
                             <p>A Bella-Pizzaria tem a melhor pizza da América Latina
                                 <br>venha ter uma expêriencia única
@@ -140,16 +140,16 @@
                                 data-ride="carousel">
                                 <div class="carousel-inner d-none d-md-block d-xl-block">
                                     <div class="carousel-item active">
-                                        <img class="img-fluid" src="img/patrocinio-ifood.png" alt="First slide">
+                                        <img class="img-fluid" src="{{ url('img/patrocinio-ifood.png')}}" alt="First slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="img-fluid" src="img/patrocinio-rappi.png" alt="Second slide">
+                                        <img class="img-fluid" src="{{ url('img/patrocinio-rappi.png')}}" alt="Second slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="img-fluid" src="img/patrocinio-seu-menu.png" alt="Third slide">
+                                        <img class="img-fluid" src="{{ url('img/patrocinio-seu-menu.png')}}" alt="Third slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="img-fluid" src="img/patrocinio-uber-eats.png" alt="Third slide">
+                                        <img class="img-fluid" src="{{ url('img/patrocinio-uber-eats.png')}}" alt="Third slide">
                                     </div>
                                 </div>
                             </div>
@@ -163,16 +163,16 @@
                                 data-ride="carousel">
                                 <div class="carousel-inner ">
                                     <div class="carousel-item active ">
-                                        <img class="img-fluid" src="img/patrocinio-ifood.png" alt="First slide">
+                                        <img class="img-fluid" src="{{ url('img/patrocinio-ifood.png')}}" alt="First slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="img-fluid" src="img/patrocinio-rappi.png" alt="Second slide">
+                                        <img class="img-fluid" src="{{ url('img/patrocinio-rappi.png')}}" alt="Second slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="img-fluid" src="img/patrocinio-seu-menu.png" alt="Third slide">
+                                        <img class="img-fluid" src="{{ url('img/patrocinio-seu-menu.png')}}" alt="Third slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="img-fluid" src="img/patrocinio-uber-eats.png" alt="Third slide">
+                                        <img class="img-fluid" src="{{ url('img/patrocinio-uber-eats.png')}}" alt="Third slide">
                                     </div>
                                 </div>
                             </div>
