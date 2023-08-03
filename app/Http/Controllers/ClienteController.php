@@ -48,6 +48,7 @@ class ClienteController extends Controller
     public function show(int $id)
     {
         $cliente = Cliente::find($id);
+        $enderecos = Endereco::class;
 
         return view('cliente.show')
             ->with(compact(
@@ -90,13 +91,7 @@ class ClienteController extends Controller
             ->with('danger', 'Excluído com Sucesso!');
     }
 
-    public function destroyendereco(int $id)
-    {
-        Endereco::find($id)->delete();
-        return redirect()
-            ->back()
-            ->with('danger', 'Excluído com Sucesso!');
-    }
+
 
 
     /*
@@ -104,6 +99,61 @@ class ClienteController extends Controller
     *|         CLIENTES ENDERECOS       |*
     *|----------------------------------|*
     */
+
+
+    public function indexEndereco(int $id_cliente)
+    {
+        $enderecos = Endereco::orderBy('cidade');
+        return view('cliente.show', ['id' => $id_cliente])->with(compact('enderecos'));
+    }
+
+    public function createEndereco(int $id_cliente)
+    {
+        $clienteEndereco = null;
+        $cliente = Cliente::find($id_cliente);
+        $enderecos = Endereco::class;
+
+        return view('cliente.formEndereco')
+            ->with(compact('cliente', 'enderecos', 'clienteEndereco'));
+    }
+
+    public function storeEndereco(Request $request, int $id_cliente)
+    {
+        $clienteEndereco = ClienteEndereco::create([
+            'id_cliente'    => $id_cliente,
+            'id_endereco'   => $request->id_endereco,
+        ]);
+
+        return redirect()->route('cliente.show', ['id' => $id_cliente])->with('success', 'Endereço Cadastrado com Sucesso!');
+    }
+
+    public function editEndereco(int $id)
+    {
+        $clienteEndereco = ClienteEndereco::find($id);
+        $cliente = $clienteEndereco->cliente();
+        $endereco = ClienteEndereco::class;
+
+        return view('produto.formEndereco')
+            ->with(compact('cliente', 'endereco', 'clienteEndereco'));
+    }
+
+    public function updateEndereco(Request $request, int $id)
+    {
+        $clienteEndereco = ClienteEndereco::find($id);
+        $clienteEndereco->update($request->all());
+
+        return redirect()
+            ->route('cliente.show', ['id' => $clienteEndereco->id_cliente])
+            ->with('success', 'Atualizado com sucesso');
+    }
+
+    public function destroyendereco(int $id)
+    {
+        ClienteEndereco::find($id)->delete();
+        return redirect()
+            ->back()
+            ->with('danger', 'Excluído com Sucesso!');
+    }
 
 
 }

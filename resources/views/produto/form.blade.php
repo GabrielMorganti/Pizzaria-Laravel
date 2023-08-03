@@ -14,6 +14,12 @@ id="produto-form" enctype="multipart/form-data" class="mt-6">
 
     <div class="row">
 
+<<<<<<< HEAD
+=======
+            <select class="form-select" name="id_tipo_produto" id="id_tipo_produto" required>
+                <option value="">Selecione</option>
+                @foreach ($produtos as $item)
+>>>>>>> main
 
             <div class="col-md-3">
                 <label class="form-label" for="id">
