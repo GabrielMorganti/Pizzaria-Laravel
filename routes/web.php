@@ -84,6 +84,24 @@ Route::middleware('auth')->group(function () {
 
 /**
  * ------------------------
+ *        |Users|
+ *-------------------------
+ */
+
+ Route::prefix('cargos')
+        ->controller(CargoController::class)
+        ->group(function () {
+            Route::get('/','index')->name('cargo.index');
+            Route::get('/novo','create')->name('cargo.create');
+            Route::get('/{id}','show')->name('cargo.show');
+            Route::get('/editar/{id}','edit')->name('cargo.edit');
+
+            Route::post('/store','store')->name('cargo.store');
+            Route::post('/update','update')->name('cargo.update');
+            Route::post('/destroy/{id}','destroy')->name('cargo.destroy');
+        });
+/**
+ * ------------------------
  *        |Cargos|
  *-------------------------
  */
@@ -115,16 +133,15 @@ Route::middleware('auth')->group(function () {
             Route::get('/editar/{id_cliente}','edit')->name('cliente.edit');
 
             Route::get('endereco/novo/{id_cliente}','createEndereco')->name('cliente.createEndereco');
-            Route::get('endereco/','indexEndereco')->name('cliente.indexEndereco');
-            Route::get('endereco/editar/{id_cliente_endereco}','editEndereco')->name('cliente.editEndereco');
+            Route::get('endereco/editar/{id_endereco}','editEndereco')->name('cliente.editEndereco');
 
             Route::post('/store','store')->name('cliente.store');
             Route::post('/update/{id_cliente}','update')->name('cliente.update');
             Route::post('/destroy/{id_cliente}','destroy')->name('cliente.destroy');
 
             Route::post('endereco/store/{id_cliente}','storeEndereco')->name('cliente.storeEndereco');
-            Route::post('endereco/update','updateEndereco')->name('cliente.updateEndereco');
-            Route::post('endereco/destroy','destroyEndereco')->name('cliente.destroyEndereco');
+            Route::post('endereco/update/{id}','updateEndereco')->name('cliente.updateEndereco');
+            Route::post('endereco/destroy/{id_endereco}','destroyEndereco')->name('cliente.destroyEndereco');
         });
 
 /**
@@ -189,8 +206,17 @@ Route::middleware('auth')->group(function () {
             Route::get('/tamanho/editar/{id}','editarTamanho')->name('produto.editTamanho');
 
 
+            Route::get('/tipo/novo','createTipo')->name('produto.createTipo');
+            Route::get('/tipo/editar/{id}','editarTipo')->name('produto.editTipo');
+            Route::post('/tipo/store','storeTipo')->name('produto.storeTipo');
+
+
             Route::post('/store','store')->name('produto.store');
+<<<<<<< HEAD
             Route::post('/update/{id_produto}','update')->name('produto.update');
+=======
+            Route::post('/update/{id}','update')->name('produto.update');
+>>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
             Route::post('/destroy','destroy')->name('produto.destroy');
 
             Route::post('/tamanho/store/{id_produto}', 'storeTamanho')->name('produto.storeTamanho');
@@ -203,8 +229,11 @@ Route::middleware('auth')->group(function () {
 
         });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
 /**
  * ------------------------
  *   |Produtos Tamanhos|

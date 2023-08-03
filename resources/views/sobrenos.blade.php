@@ -170,214 +170,109 @@
 <div class="borda"></div>
 {{-- /HEADER --}}
 
+{{-- BANNER --}}
+<div class="container-fluid banner ">
+    <div class="row">
+        <img src="{{ url('img/'.rand(1,7).'.png') }}" alt="">
+    </div>
+</div>
+{{-- /BANNER --}}
+
 <!-- CONTEUDO -->
 <div class="container-fluid mt-5 ">
 
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up"></i></button>
     <div class="row mt-5"></div>
 
-    <div class="row mt-5 promocao">
-        <h2 class="">
-                Confira nossas promoções imperdíveis!
-        </h2>
-        <div class="d-none d-md-block d-xl-block">
-            <div class="flex-container">
-                <div class="col-md-3 promo"> <a class="d-flex justify-content-center" href=""><img
-                            width="360px" class="rounded img-fluid" src="{{ url('img/promocao2.png') }}"
-                            alt="Promoção2"></a></div>
-                <div class="col-md-3 promo"> <a class="d-flex justify-content-center" href=""><img
-                            width="360px" class="rounded img-fluid" src="{{ url('img/promocao.png') }}"
-                            alt="Promoção"></a></div>
-                <div class="col-md-3 promo"> <a class="d-flex justify-content-center" href=""><img
-                            width="360px" class="rounded img-fluid" src="{{ url('img/promocao5.png') }}"
-                            alt="Promoção5"></a></div>
-                <div class="col-md-3 promo"> <a class="d-flex justify-content-center" href=""><img
-                            width="360px" class="rounded img-fluid" src="{{ url('img/promocao4.png') }}"
-                            alt="Promoção4"></a></div>
-            </div>
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-5">
+            <h2 class="text-center">Nossa História</h2>
+            <p class="text-center">✻</p>
+            <p class="">Nossa história começou em uma simples rodinha de amigos, um grupo diversificado de amantes
+                de pizza que acreditavam que a felicidade está em uma fatia quentinha e saborosa.
+                Tudo começou em uma noite agradável, quando estávamos reunidos em torno de uma mesa,
+                compartilhando risadas e histórias enquanto saboreávamos algumas das melhores pizzas da cidade.
+                Foi nesse momento que surgiu a ideia de abrir nossa própria pizzaria, um espaço onde pudéssemos
+                oferecer aos outros a mesma experiência deliciosa que tínhamos entre amigos.
+                Movidos pela nossa devoção à gastronomia e pela crença de que boas amizades
+                são a essência da vida, decidimos tornar esse sonho uma realidade.</p>
         </div>
 
-        <div class="d-block d-md-none">
-            <div class="flex-container">
-                <div class="col-md-3 me-1 promo"> <a class="d-flex justify-content-center" href=""><img
-                            width="360px" class="rounded img-fluid" src="{{ url('img/promocao2.png') }}"
-                            alt="Promoção2"></a></div>
-                <div class="col-md-3 me-1 promo"> <a class="d-flex justify-content-center" href=""><img
-                            width="360px" class="rounded img-fluid" src="{{ url('img/promocao.png') }}"
-                            alt="Promoção"></a></div>
-            </div>
-
-            <div class="flex-container mt-3">
-                <div class="col-md-3 me-1 promo"> <a class="d-flex justify-content-center" href=""><img
-                            width="360px" class="rounded img-fluid" src="{{ url('img/promocao5.png') }}"
-                            alt="Promoção5"></a></div>
-                <div class="col-md-3 me-1 promo"> <a class="d-flex justify-content-center" href=""><img
-                            width="360px" class="rounded img-fluid" src="{{ url('img/promocao4.png') }}"
-                            alt="Promoção4"></a></div>
-            </div>
+        <div class="col-md-3 text-end mt-5 d-none d-md-block d-xl-block">
+            <img class="img-fluid" src="{{ url('img/sobrenos.png')}}" alt="">
         </div>
 
-        <span id="tresPontos"></span><span id="mostrarMais">
-            <div class="d-none d-md-block d-xl-block mt-3">
-                <div class="flex-container">
-                    <div class="col-md-3 promo"> <a class="d-flex justify-content-center" href=""><img
-                                width="360px" class="rounded img-fluid" src="{{ url('img/promocao1.png') }}"
-                                alt="Promoção2"></a></div>
-                    <div class="col-md-3 promo"> <a class="d-flex justify-content-center" href=""><img
-                                width="360px" class="rounded img-fluid" src="{{ url('img/promocao6.png') }}"
-                                alt="Promoção"></a></div>
-                    <div class="col-md-3 promo"> <a class="d-flex justify-content-center" href=""><img
-                                width="360px" class="rounded img-fluid" src="{{ url('img/promocao3.png') }}"
-                                alt="Promoção5"></a></div>
-                    <div class="col-md-3 promo"> <a class="d-flex justify-content-center" href=""><img
-                                width="360px" class="rounded img-fluid" src="{{ url('img/promocao7.png') }}"
-                                alt="Promoção4"></a></div>
-                </div>
-            </div>
-
-            <div class="d-block d-md-none">
-                <div class="flex-container mt-3">
-                    <div class="col-md-3 me-1 promo"> <a class="d-flex justify-content-center" href=""><img
-                                width="360px" class="rounded img-fluid" src="{{ url('img/promocao1.png') }}"
-                                alt="Promoção2"></a></div>
-                    <div class="col-md-3 me-1 promo"> <a class="d-flex justify-content-center" href=""><img
-                                width="360px" class="rounded img-fluid" src="{{ url('img/promocao6.png') }}"
-                                alt="Promoção"></a></div>
-                </div>
-                <div class="flex-container mt-3">
-                    <div class="col-md-3 me-1 promo"> <a class="d-flex justify-content-center" href=""><img
-                                width="360px" class="rounded img-fluid" src="{{ url('img/promocao3.png') }}"
-                                alt="Promoção5"></a></div>
-                    <div class="col-md-3 me-1 promo"> <a class="d-flex justify-content-center" href=""><img
-                                width="360px" class="rounded img-fluid" src="{{ url('img/promocao7.png') }}"
-                                alt="Promoção4"></a></div>
-                </div>
-            </div>
-        </span>
-
-        <div class="col-md-3">
-            <button onclick="leiaMais()" id="btnLeiaMais" class="btn btnLeiaMais mt-4 botao">Ver Mais</button>
-        </div>
-    </div>
-
-
-    <div class="row mt-5 promocao">
-        <h2 class="">
-            Confira nosso Cardápio:
-        </h2>
-        <div class="d-none d-md-block d-xl-block">
-            <div class="flex-container">
-                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/entradas"><img width="360px"
-                            class="rounded img-fluid" src="{{ url('img/batata2.png') }}" alt="Promoção2"></a></div>
-                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/pizzas"><img width="360px"
-                            class="rounded img-fluid" src="{{ url('img/pastel2.png') }}" alt="Promoção"></a></div>
-                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/pizzas"><img width="360px"
-                            class="rounded img-fluid" src="{{ url('img/portuguesa2.png') }}" alt="Promoção5"></a></div>
-                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/sobremesas"><img width="360px"
-                            class="rounded img-fluid" src="{{ url('img/petit2.png') }}" alt="Promoção4"></a></div>
-            </div>
+        <div class="col-md-3 text-start mt-5 d-none d-md-block d-xl-block">
+            <img class="img-fluid" src="{{ url('img/sobrenos2.png')}}" alt="">
         </div>
 
-        <div class="d-block d-md-none">
-            <div class="flex-container">
-                <div class="col-md-3 me-2 promo">
-                    <a class="" href="http://127.0.0.1:8000/entradas"><img
-                    class="rounded img-fluid" src="{{ url('img/batata2.png') }}" alt="Promoção2"></a>
-                </div>
-                <div class="col-md-3 me-2 promo">
-                    <a class="" href="http://127.0.0.1:8000/pizzas"><img
-                    class="rounded img-fluid" src="{{ url('img/pastel2.png') }}" alt="Promoção"></a>
-                </div>
-            </div>
-            <div class="flex-container mt-3">
-                <div class="col-md-3 me-2 promo">
-                    <a class="" href="http://127.0.0.1:8000/pizzas"><img
-                    class="rounded img-fluid" src="{{ url('img/portuguesa2.png') }}" alt="Promoção5"></a>
-                </div>
-
-                <div class="col-md-3 me-2 promo">
-                    <a class="" href="http://127.0.0.1:8000/sobremesas"><img
-                    class="rounded img-fluid" src="{{ url('img/petit2.png') }}" alt="Promoção4"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <a class="btn mt-4 botao" href="http://127.0.0.1:8000/cardapio">Ver Mais</a>
-        </div>
-    </div>
-</div>
-
-
-<!-- aaa -->
-<div class="container-fluid backgroundimg">
-
-    <div class="row mt-5 ">
-        <div class="col-md-6">
-            <img src="{{ url('img/pizzaria.png') }}" alt="" class=" img-fluid mt-5 pizzaria">
-        </div>
-
-        <div class="col-md-6 mt-3 boasvindas">
-            <h1 class="mt-5 p-3 font2"> Bem-vindo à Bella-Pizzaria!</h1>
-
-            <p class=" p-3  font2">
-                Somos uma pizzaria apaixonada por oferecer as melhores experiências gastronômicas para os amantes da
-                pizza no Brasil.
-                Nossas raízes estão profundamente enraizadas na tradição italiana,
-                e estamos comprometidos em trazer um toque autêntico e saboroso para cada pizza que sai de nossa
-                cozinha.
-
-                Nossa história começou há mais de uma década, com a missão de fornecer às famílias,
-                amigos e comunidades uma opção deliciosa para compartilhar momentos especiais. Desde então,
-                temos crescido e prosperado, estabelecendo várias lojas em todo o Brasil.
-                É com orgulho que nos tornamos uma parte valiosa da cultura culinária local.
-                Ganhamos o prêmio de melhor pizza da América Latina.
-            </p>
-
-            <p class=" p-3 font2">
-                O que nos diferencia são nosso ingredientes frescos e selecionados,
-                receitas tradicionais italianas e a diversidade de sabores.
-                A experiência do cliente é muito importante para nós, prezamos a qualidade do atendimento e o conforto
-                que o cliente tem com o ambiente.
-                Nossa pizzaria tambem apoia a sustentabilidade, prezando o bem estar da nossa comunidade, clientes e o
-                meio ambiente.
-            </p>
+        <div class="col-md-3 text-center mt-5 d-block d-md-none">
+            <img class="img-fluid" src="{{ url('img/sobrenos7.png')}}" alt="">
         </div>
     </div>
 
     <div class="row mt-5">
-
-        <div class="col-md-12 premios">
-            <h2 class="text-center">🍕🏆 Orgulhosamente Premiada pelo Guia Michelin! 🏆🍕</h2>
-
-            <h4 class="mt-2 text-center">É com imensa alegria que anunciamos que a nossa pizzaria foi agraciada com o
-                prestigioso Prêmio Michelin não apenas uma vez, mas duas vezes consecutivas! Em 2022 e novamente em
-                2023, fomos reconhecidos pelo Guia Michelin como uma das melhores pizzarias do mundo.
-                A conquista do cobiçado prêmio é o resultado do incansável trabalho em equipe, da dedicação apaixonada à
-                arte da pizza e do compromisso constante em oferecer a você, nosso cliente querido, uma experiência
-                gastronômica única e inesquecível.</h4>
+        <div class="col-md-3 text-end mt-5 d-none d-md-block d-xl-block">
+            <img class="img-fluid" src="{{ url('img/sobrenos3.png')}}" alt="">
         </div>
 
-        <div class="col-md-6 d-flex justify-content-center">
-            <img width="80%" class="img-fluid mt-2" src="{{ url('img/premio.png') }}" alt="">
+        <div class="col-md-3 text-start mt-5 d-none d-md-block d-xl-block">
+            <img class="img-fluid" src="{{ url('img/sobrenos4.png')}}" alt="">
         </div>
 
-        <div class="col-md-6 d-flex justify-content-center">
-            <img width="80%" class="img-fluid mt-2" src="{{ url('img/premio2.png') }}" alt="">
+        <div class="col-md-5">
+            <h2 class="text-center">Nossa Gastronomia</h2>
+            <p class="text-center">✻</p>
+            <p class="">Cada um de nós contribuiu com seus talentos únicos: alguns com habilidades culinárias
+                excepcionais, outros com uma visão inovadora de negócios e, é claro, todos com um paladar apurado.
+                Assim, nasceu a Bella-Pizzaria, uma casa de tradição familiar e receitas secretas que conquistam
+                paladares há gerações. Nossos ingredientes são selecionados cuidadosamente, priorizando a qualidade
+                e o sabor genuíno. Nossas massas são preparadas com o carinho e a técnica que apenas uma verdadeira
+                pizzaria artesanal pode oferecer. Junte-se a nós nessa jornada saborosa e venha experimentar o
+                amor e a dedicação que colocamos em cada fatia da Bella-Pizzaria. Estamos ansiosos para recebê-lo
+                 e criar momentos inesquecíveis em torno da melhor pizza da cidade!"</p>
         </div>
 
-        <div class="row mt-5"></div>
-    </div>
+        <div class="col-md-3 text-center mt-5 d-block d-md-none">
+            <img class="img-fluid" src="{{ url('img/sobrenos8.png')}}" alt="">
+        </div>
 
-</div>
-<div class="container-fluid">
-    <div class="row mt-5">
-        <h1>Informações Sobre Entrega e Retirada</h1>
     </div>
 
     <div class="row mt-5">
-        <h1>Avalições</h1>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-5">
+            <h2 class="text-center">Nossa Casa</h2>
+            <p class="text-center">✻</p>
+            <p class="">Mas, mais do que apenas um lugar para comer pizza, a Bella-Pizzaria é um espaço acolhedor
+                e alegre, onde cada cliente é recebido com um sorriso caloroso e tratado como um amigo de longa
+                data. Nossa equipe é apaixonada pelo que faz e está sempre pronta para ajudá-lo a encontrar a
+                pizza perfeita para cada ocasião. Na Bella-Pizzaria, acreditamos que cada pizza conta uma
+                história, e estamos ansiosos para sermos parte das suas melhores lembranças. Seja para uma
+                reunião em família, uma celebração especial ou apenas uma noite descontraída entre amigos,
+                nossas pizzas estão prontas para levar até você a magia de sabores autênticos e aconchegantes.</p>
+        </div>
+
+        <div class="col-md-3 text-end mt-5 d-none d-md-block d-xl-block">
+            <img class="img-fluid" src="{{ url('img/sobrenos10.png')}}" alt="">
+        </div>
+
+        <div class="col-md-3 text-start mt-5 d-none d-md-block d-xl-block">
+            <img class="img-fluid" src="{{ url('img/sobrenos11.png')}}" alt="">
+        </div>
+
+        <div class="col-md-3 text-center mt-5 d-block d-md-none">
+            <img class="img-fluid" src="{{ url('img/sobrenos12.png')}}" alt="">
+        </div>
     </div>
+
+
+
 
 </div>
 <!-- /CONTEUDO -->

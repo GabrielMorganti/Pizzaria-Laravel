@@ -57,7 +57,11 @@
         @forelse ($cliente->enderecocliente()->get() as $item )
             <tr>
                 <td>
-                    <a class="btn btn-success" href=""><i class="bi bi-pencil"></i></a>
+                    <a class="btn btn-success"
+                    href="{{ route('cliente.editEndereco', ['id_endereco' => $item->id_cliente_endereco])}}">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                    <a class="btn btn-warning" href=""><i class="bi bi-trash"></i></a>
                 </td>
 
                 <td>

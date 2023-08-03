@@ -170,6 +170,14 @@
 <div class="borda"></div>
 {{-- /HEADER --}}
 
+{{-- BANNER --}}
+<div class="container-fluid banner ">
+    <div class="row">
+        <img src="{{ url('img/'.rand(1,11).'.png') }}" alt="">
+    </div>
+</div>
+{{-- /BANNER --}}
+
 <!-- CONTEUDO -->
 <div class="container-fluid mt-5 ">
 
@@ -258,6 +266,7 @@
         <div class="col-md-3">
             <button onclick="leiaMais()" id="btnLeiaMais" class="btn btnLeiaMais mt-4 botao">Ver Mais</button>
         </div>
+
     </div>
 
 
@@ -305,6 +314,20 @@
         <div class="col-md-3">
             <a class="btn mt-4 botao" href="http://127.0.0.1:8000/cardapio">Ver Mais</a>
         </div>
+    </div>
+
+    <div class="row mt-5">
+        <h1>Entrega e Retirada</h1>
+
+        <h3 class="mt-3"><span><i class="bi bi-bicycle"></span></i>Entrega 60 min </h3>
+        <h3 class="mt-3"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 3h8l-1 9h-6z" />
+            <path d="M7 18h2v3h-2z" />
+            <path d="M20 3v12h-5c-.023 -3.681 .184 -7.406 5 -12z" />
+            <path d="M20 15v6h-1v-3" />
+            <path d="M8 12l0 6" />
+          </svg>Retirada 35 Min</h3>
     </div>
 </div>
 
@@ -371,13 +394,58 @@
 
 </div>
 <div class="container-fluid">
+<<<<<<< HEAD
     <div class="row mt-5">
         <h1>Informações Sobre Entrega e Retirada</h1>
     </div>
 
     <div class="row mt-5">
         <h1>Avalições</h1>
+=======
+
+    <div class="row mt-5 promocao mb-5">
+        <h2 class="">
+            Avaliação dos Clientes:
+        </h2>
+        <div class="d-none d-md-block d-xl-block">
+            <div class="flex-container">
+                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/entradas"><img width="360px"
+                            class="rounded img-fluid" src="{{ url('img/avaliacao1.png') }}" alt="Promoção2"></a></div>
+                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/pizzas"><img width="360px"
+                            class="rounded img-fluid" src="{{ url('img/avaliacao2.png') }}" alt="Promoção"></a></div>
+                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/pizzas"><img width="360px"
+                            class="rounded img-fluid" src="{{ url('img/avaliacao3.png') }}" alt="Promoção5"></a></div>
+                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/sobremesas"><img width="360px"
+                            class="rounded img-fluid" src="{{ url('img/avaliacao4.png') }}" alt="Promoção4"></a></div>
+            </div>
+        </div>
+
+        <div class="d-block d-md-none">
+            <div class="flex-container">
+                <div class="col-md-3 me-2 promo">
+                    <a class="" href="http://127.0.0.1:8000/entradas"><img
+                    class="rounded img-fluid" src="{{ url('img/avaliacao1.png') }}" alt="Promoção2"></a>
+                </div>
+                <div class="col-md-3 me-2 promo">
+                    <a class="" href="http://127.0.0.1:8000/pizzas"><img
+                    class="rounded img-fluid" src="{{ url('img/avaliacao2.png') }}" alt="Promoção"></a>
+                </div>
+            </div>
+            <div class="flex-container mt-3">
+                <div class="col-md-3 me-2 promo">
+                    <a class="" href="http://127.0.0.1:8000/pizzas"><img
+                    class="rounded img-fluid" src="{{ url('img/avaliacao3.png') }}" alt="Promoção5"></a>
+                </div>
+
+                <div class="col-md-3 me-2 promo">
+                    <a class="" href="http://127.0.0.1:8000/sobremesas"><img
+                    class="rounded img-fluid" src="{{ url('img/avaliacao4.png') }}" alt="Promoção4"></a>
+                </div>
+            </div>
+        </div>
+>>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
     </div>
+</div>
 
 </div>
 <!-- /CONTEUDO -->

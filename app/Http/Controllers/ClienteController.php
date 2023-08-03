@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreClienteRequest;
+use App\Http\Requests\UpdateClienteRequest;
 
 use App\Models\{
     Cliente,
@@ -17,7 +19,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::orderBy('nome');
+        $clientes = Cliente::orderBy('nome');//->paginate(10);
+
         return view('cliente.index')->with(compact('clientes'));
     }
 
@@ -49,6 +52,7 @@ class ClienteController extends Controller
     {
         $cliente = Cliente::find($id);
         $enderecos = Endereco::class;
+        $clienteEndereco = ClienteEndereco::class;
 
         return view('cliente.show')
             ->with(compact(
@@ -100,13 +104,6 @@ class ClienteController extends Controller
     *|----------------------------------|*
     */
 
-
-    public function indexEndereco(int $id_cliente)
-    {
-        $enderecos = Endereco::orderBy('cidade');
-        return view('cliente.show', ['id' => $id_cliente])->with(compact('enderecos'));
-    }
-
     public function createEndereco(int $id_cliente)
     {
         $clienteEndereco = null;
@@ -119,37 +116,43 @@ class ClienteController extends Controller
 
     public function storeEndereco(Request $request, int $id_cliente)
     {
+        $endereco = Endereco::create($request->all());
+
         $clienteEndereco = ClienteEndereco::create([
             'id_cliente'    => $id_cliente,
-            'id_endereco'   => $request->id_endereco,
+            'id_endereco'   => $endereco->id_endereco,
+            'observacoes'   => $request->observacoes,
         ]);
 
         return redirect()->route('cliente.show', ['id' => $id_cliente])->with('success', 'Endereço Cadastrado com Sucesso!');
     }
 
-    public function editEndereco(int $id)
+    public function editEndereco(int $id_endereco)
     {
-        $clienteEndereco = ClienteEndereco::find($id);
-        $cliente = $clienteEndereco->cliente();
-        $endereco = ClienteEndereco::class;
+        $clienteEndereco = ClienteEndereco::with([
+            'cliente',
+            'endereco'
+        ])->find($id_endereco);
+        // dd($clienteEndereco->cliente->nome);
+        // $cliente = $clienteEndereco->cliente();
+        $enderecos = ClienteEndereco::class;
 
-        return view('produto.formEndereco')
-            ->with(compact('cliente', 'endereco', 'clienteEndereco'));
+        return view('cliente.formEndereco')
+            ->with(compact('enderecos','clienteEndereco'));
     }
 
     public function updateEndereco(Request $request, int $id)
     {
         $clienteEndereco = ClienteEndereco::find($id);
         $clienteEndereco->update($request->all());
+        $cliente = Cliente::all();
 
-        return redirect()
-            ->route('cliente.show', ['id' => $clienteEndereco->id_cliente])
-            ->with('success', 'Atualizado com sucesso');
+        return redirect()->route('cliente.show', ['id' => $clienteEndereco->id_cliente])->with(compact('cliente'), 'success', 'Endereço Cadastrado com Sucesso!');
     }
 
-    public function destroyendereco(int $id)
+    public function destroyEndereco(int $id_endereco)
     {
-        ClienteEndereco::find($id)->delete();
+        Endereco::find($id_endereco)->delete();
         return redirect()
             ->back()
             ->with('danger', 'Excluído com Sucesso!');

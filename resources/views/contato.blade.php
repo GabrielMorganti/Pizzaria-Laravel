@@ -170,6 +170,14 @@
 <div class="borda"></div>
 {{-- /HEADER --}}
 
+{{-- BANNER --}}
+<div class="container-fluid banner ">
+    <div class="row">
+        <img src="{{ url('img/'.rand(1,7).'.png') }}" alt="">
+    </div>
+</div>
+{{-- /BANNER --}}
+
 <!-- CONTEUDO -->
 <div class="container">
 
@@ -178,7 +186,7 @@
 
     <div class="row salao mt-5">
         <div class="col-md-6">
-            <img class="teste img-fluid" src="{{ url('img/salao.png') }}" alt="">
+            <img class="teste img-fluid" src="{{ url('img/pizzariaSalao2.jpg') }}" alt="">
             <h3 class="text-center">🍕🎉 Aluguel do Salão da Nossa Pizzaria para Festas e Casamentos! 🎉🍕</h3>
             <p class="text-center">É com imensa alegria que anunciamos uma novidade especial em nossa pizzaria! Agora
                 você pode desfrutar do ambiente acolhedor e saboroso do nosso espaço para celebrar momentos
@@ -187,19 +195,24 @@
                 para mais informações utilize o formulário ao lado</p>
         </div>
 
-        <div class="col-md-6">
-            <H1><i class="fa-solid fa-address-card mb-5"></i> CONTATO</H1>
-            <?php
-                        if(isset($_GET['ok'])){
-                        ?>
+        <div class="col-md-6 text-cen">
+            <H1 class="text-center"><i class="bi bi-person-circle"></i> CONTATO</H1>
+                @php
+                    if(isset($_GET['ok'])){
+                @endphp
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 Mensagem enviada com sucesso.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <?php
-                        }//Fecha o if da mensagem de alerta
-                    ?>
+                @php
+                    }//Fecha o if da mensagem de alerta
+                @endphp
 
+            <h6><i class="bi bi-geo-alt "></i> Av. Ramiro Colleoni, 110 - Centro, Santo André</h6>
+            <div class="mt-3"></div>
+            <h6> <i class="bi bi-telephone"></i> (11)92548-7734 | (11)98829-5583</h6>
+            <div class="mt-3"></div>
+            <h6> <i class="bi bi-envelope-paper"></i> Bella-PizzariaT94@gmail.com</h6>
             <form action="?" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
@@ -225,7 +238,7 @@
                         <textarea class="form-control" name="conteudo" id="conteudo"></textarea>
                     </div>
                     <div class="col-md-2 mt-3">
-                        <button type="submit" class="btn btn-dark mb-5 mt-1 btn-lg" name="btnEnviar" id="btnEviar"
+                        <button type="submit" class="btn botao mb-5 mt-1 btn-lg" name="btnEnviar" id="btnEviar"
                             value="Enviar" style="float:left;">Enviar</button>
                     </div>
                 </div>

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
 {{-- exemplo buttom  --}}
 {{-- <button type="button" class="btn btn-danger ml-1" data-bs-toggle="modal" data-bs-target="#modalExcluir"
     data-identificacao="Nº {{$produto->id_produto}} : {{ $produto->nome }}"
@@ -7,7 +11,11 @@
     </span>
 </button> --}}
 {{-- MODAL DE EXCLUSÃO --}}
+<<<<<<< HEAD
  <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirLabel"
+=======
+<div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirLabel"
+>>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -34,12 +42,15 @@
 {{-- /MODAL DE EXCLUSÃO --}}
 {{-- SCRIPT MODAL DE EXCLUSÃO --}}
 <script>
+<<<<<<< HEAD
 // @yield('scriptd')
 
 
 
 
 
+=======
+>>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
     $('#modalExcluir').on('show.bs.modal', function (event) {
     let button = $(event.relatedTarget)
     let identificacao = button.data('identificacao')
@@ -47,7 +58,11 @@
     $('#identificacao').text(identificacao)
     $('#Excluir').attr('action', url)
   })
+<<<<<<< HEAD
 
 
 {{-- </script> --}}
+=======
+</script>
+>>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
 {{-- /SCRIPT MODAL DE EXCLUSÃO --}}

@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
 .table > :not(caption) > * > * {
 
     background-color: transparent;
@@ -414,6 +417,14 @@ body{
 
 .pizzaria{
     margin-left: 0px;
+}
+
+.menufixo{
+    height: 0px;
+    margin-top: 0px; /* altura que está do topo */
+    top: 0px; /* altura que vai parar antes do topo */
+    margin-bottom: 450px;
+    position: relative;
 }
 
 /* /INDEX */

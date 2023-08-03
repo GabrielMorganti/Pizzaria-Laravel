@@ -5,6 +5,7 @@
     {{-- /Menu --}}
 
     <div class="mt-3"></div>
+<<<<<<< HEAD
     <h1> Produto: {{ $produto->nome }}</h1>
     <h2> Tipo: {{ $produto->tipo->tipo }}</h2>
     @if ($produto->foto)
@@ -14,20 +15,32 @@
 
 @endif
     <p> Descrição: {!! nl2br($produto->descricao) !!}</p>
+=======
+    <h1> Produto:{{ $produto->nome }} </h1>
+        <h2> Tipo: {{ $produto->tipo->tipo }} </h2>
+        @if ($produto->foto)
+            <p>
+                <img src="{{ url('storage/fotos/' . $produto->foto) }}" class="img-thumbnail" width="450">
+            </p>
+>>>>>>> b46dbec83104d02ba668b8bcdc57142cadc5dca2
 
-    @if ($produto->observacoes)
-        <p class="alert alert-info">Observações: {!! nl2br($produto->observacoes) !!}</p>
-    @endif
+        @endif
+        <p> Descrição: {!! nl2br($produto->descricao) !!}</p>
+        @if ($produto->observacoes)
+            <p class="alert alert-info">
+                {!! nl2br($produto->observacoes) !!}
+            </p>
+        @endif
 
-    <h6> <a class="btn btn-primary" href="{{ route('produto.createTamanho', ['id_produto' => $produto->id_produto]) }}">
+    <h6>
+        <a class="btn btn-success" href="{{ route('produto.createTamanho', ['id_produto' => $produto->id_produto]) }}">
             Adicionar Novo Tamanho
         </a>
     </h6>
-
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th>Ações</th>
+                <th class="col-2">Ações</th>
                 <th>Tamanho</th>
                 <th>Preço</th>
                 <th>Obs.:</th>
@@ -37,11 +50,13 @@
             @forelse ($produto->tamanhos()->get() as $item)
                 <tr>
                     <td>
-                        <a class="btn btn-success" href="#"><i class="bi bi-pencil"></i></a>
+                        {{-- editar --}}
+                        <a class="btn btn-primary" href="#">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
                     </td>
-
                     <td>
-                        {!! $item->tamanho->tamanho !!}
+                        {{-- {!! $item->tamanho->tamanho !!} --}}
                     </td>
                     <td>
                         {{ $item->preco }}
@@ -52,7 +67,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="2">
+                    <td colspan="4">
                         Nenhum tamanho definido para esse produto
                     </td>
                 </tr>

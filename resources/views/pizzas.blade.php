@@ -170,6 +170,14 @@
 <div class="borda"></div>
 {{-- /HEADER --}}
 
+{{-- BANNER --}}
+<div class="container-fluid banner ">
+    <div class="row">
+        <img src="{{ url('img/'.rand(1,7).'.png') }}" alt="">
+    </div>
+</div>
+{{-- /BANNER --}}
+
 <div class="container-fluid content">
     <div class="flex-container">
         <div class="row mt-5">
@@ -264,9 +272,6 @@
                             <p class="text-start">
                                 Molho de tomate, parmesão e gorgonzola
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
@@ -301,9 +306,6 @@
                             <p class="text-start">
                                 Molho de tomate, Catupiry, muçarela, gorgonzola e parmesão
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
 
@@ -340,9 +342,6 @@
                             <p class="text-start">
                                 Molho de tomate, Pepperoni e Muçarela
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
@@ -376,9 +375,6 @@
                             <p class="text-start">
                                 Molho de tomate, Frango e Catupiry
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
@@ -412,9 +408,6 @@
                             <p class="text-start">
                                 Molho de tomate, Calabresa e Muçarela
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
@@ -448,9 +441,6 @@
                             <p class="text-start">
                                 Molho de tomate e Muçarela
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
@@ -487,9 +477,6 @@
                             <p class="text-start">
                                 Molho de tomate, frango e cheddar
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
@@ -524,9 +511,6 @@
                             <p class="text-start">
                                 Molho de tomate, Carne seca com purê de madioca e azeitona preta
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
 
@@ -563,9 +547,6 @@
                             <p class="text-start">
                                 Molho de tomate, Carne seca com queijo muçarela
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
@@ -599,9 +580,6 @@
                             <p class="text-start">
                                 Molho de tomate, Calabresa ralada, queijo muçarela, ovos e tomate
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
@@ -635,9 +613,6 @@
                             <p class="text-start">
                                 Molho de tomate, Atum e queijo muçarela
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
@@ -671,9 +646,6 @@
                             <p class="text-start">
                                 Molho de tomate, Camarão, queijo muçarela e azeitona preta
                             </p>
-                            <button class="btn btn-success align-items-start" type="submit">
-                                ADICIONAR AO CARRINHO
-                            </button>
                         </div>
                         <div class="col">
                             <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
