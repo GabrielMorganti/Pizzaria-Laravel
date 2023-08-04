@@ -36,7 +36,7 @@
             <th class="col-1">ID</th>
             <th>usuario</th>
             <th>Observações</th>
-            <th>Qtd Tamanhos</th>
+            <th>Cargo</th>
 
         </tr>
     </thead>
