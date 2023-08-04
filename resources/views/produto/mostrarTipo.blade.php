@@ -204,27 +204,36 @@
                     <tbody>
                         <tr>
                             <th scope="row"></th>
-                            <td><a href="http://127.0.0.1:8000/entradas">
+                            <td><a href="http://127.0.0.1:8000/produtos/cardapio/3">
                                     <h1> <img src="{{ url('img/fritas.png') }}" width="7%"> ENTRADAS</h1>
-                                </a></td>
+                                </a>
+                            </td>
                         </tr>
                         <tr>
                     </tbody>
                     </thead>
                 </table>
+                        <tr>
+                            <div class="table-aguardo">
+                                <input id="aguardando" type="checkbox">
+                                <label for="aguardando" class="header"><h1 class="white"><img src="{{ url('img/icons8-pizza-80.png') }}" width="10%"> PIZZAS</h1></td></label>
+                                 <table cellspacing="0">
+                                    <tr>
+                                       <td><a href="http://127.0.0.1:8000/produtos/cardapio/4"><h3 class="white">PIZZAS PREMIUM</h3></a></td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="http://127.0.0.1:8000/produtos/cardapio/5"><h3 class="white"> PIZZAS TRADICIONAIS</h3></a></td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="http://127.0.0.1:8000/produtos/cardapio/2"><h3 class="white"> PIZZAS DOCES</h3></a></td>
+                                    </tr>
+                                    <tr>
+                                 </table>
+                              </div>
+                              <hr>
+                        </tr>
 
-                <table class="table table-hover text-center">
-                    <thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row"></th>
-                            <td><a href="http://127.0.0.1:8000/pizzas">
-                                    <h1 class="white"><img src="{{ url('img/icons8-pizza-80.png') }}" width="10%"> PIZZAS</h1>
-                                </a></td>
-                        </tr>
-                    </tbody>
-                    </thead>
-                </table>
+
 
                 <table class="table table-hover text-center">
                     <thead>
@@ -233,7 +242,8 @@
                             <th scope="row"></th>
                             <td><a href="http://127.0.0.1:8000/bebidas">
                                     <h1><i class="bi bi-cup-straw fotinha"></i>BEBIDAS</h1>
-                                </a></td>
+                                </a>
+                            </td>
                         </tr>
                     </tbody>
                     </thead>
@@ -244,9 +254,10 @@
                     <tbody>
                         <tr>
                             <th scope="row"></th>
-                            <td><a href="http://127.0.0.1:8000/sobremesas">
+                            <td><a href="http://127.0.0.1:8000/produtos/cardapio/11">
                                     <h1> <img src="{{ url('img/icons8-taça-de-sorvete-50.png') }}" width="8%"> SOBREMESAS</h1>
-                                </a></td>
+                                </a>
+                            </td>
                         </tr>
                     </tbody>
                     </thead>
@@ -254,9 +265,8 @@
             </div>
 
             <div class="col-md-8 mt-2">
+                <h4 class="text-center">{{ $tiposProdutos->tipo }}</h4>
                 @foreach ($produtos->get() as $produto)
-
-                    {{-- <h4 class="text-center">{{ $produto->tipo->tipo }}</h4> --}}
                     <button onclick="topFunction()" id="myBtn" title="Go to top"><i
                             class="bi bi-arrow-up"></i></button>
                     <div class="row mt-5"></div>
@@ -279,9 +289,9 @@
                                 <br>
                                 <select class="form-select" id="id_tamanho" name="id_tamanho">
                                     <option value="" selected>Escolha o tamanho</option>
-                                    @foreach ($produtosTamanho::orderby('id_tamanho')->get() as $item)
+                                    @foreach ($produtosTamanho::orderBy('id_produto')->get() as $item)
 
-                                    <option value="{{$item->preco}}">{{$item->tamanho}}</option>
+                                    <option value="">{{$item->tamanho->tamanho}}</option>
                                     {{-- <option value="R$ 47.00">{{$produto->tamanhos->tamanho->tamanho}}</option> --}}
                                     @endforeach
                                 </select>
@@ -302,5 +312,9 @@
 
 </body>
 
+
 @section('scripts')
+@endsection
+
+@section('scripts3')
 @endsection

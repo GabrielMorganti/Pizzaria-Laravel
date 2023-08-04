@@ -25,7 +25,7 @@ class ProdutoController extends Controller
 
     public function indexTipo(int $id_tipo_produto)
     {
-        $produtos = Produto::where('id_tipo_produto', $id_tipo_produto)->orderBy('nome');
+        $produtos = Produto::where('id_tipo_produto', $id_tipo_produto)->orderBy('created_at');
         $tiposProdutos = TipoProduto::find($id_tipo_produto);
         $produtosTamanho = ProdutoTamanho::class;
 

@@ -31,9 +31,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/cardapio', function () {
-    return view('entradas');
-});
 
 Route::get('/entradas', function () {
     return view('entradas');
@@ -96,7 +93,7 @@ Route::middleware('auth')->group(function () {
             Route::get('/{id}','show')->name('user.show');
             Route::get('/editar/{id}','edit')->name('user.edit');
             Route::get('/{id}','show')->name('user.show');
-            
+
             Route::post('/store','store')->name('user.store');
             Route::post('/update','update')->name('user.update');
             Route::delete('/destroy/{id}','destroy')->name('user.destroy');
@@ -204,7 +201,7 @@ Route::middleware('auth')->group(function () {
             Route::get('/novo','create')->name('produto.create');
             Route::get('/{id}','show')->name('produto.show');
             Route::get('/editar/{id}','edit')->name('produto.edit');
-            Route::get('/mostrarTipo/{id_tipo_produto}','indexTipo')->name('produto.indexTipo');
+            Route::get('/cardapio/{id_tipo_produto}','indexTipo')->name('produto.indexTipo');
 
 
 

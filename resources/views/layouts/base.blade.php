@@ -212,6 +212,24 @@
 
 <script>
     @yield('scripts2')
+        function pizzas() {
+    const tresPontos = document.getElementById('tresPontos');
+    const mostrarMais = document.getElementById('mostrarMais');
+    const btnpizzas = document.getElementById('btnpizzas');
+
+
+    if (tresPontos.style.display == 'none') {
+        tresPontos.style.display = 'inline';
+        mostrarMais.style.display = 'none';
+    } else {
+        tresPontos.style.display = 'none';
+        mostrarMais.style.display = 'inline';
+    }
+}
+</script>
+
+<script>
+    @yield('scripts3')
         function leiaMais() {
     const tresPontos = document.getElementById('tresPontos');
     const mostrarMais = document.getElementById('mostrarMais');
@@ -232,6 +250,7 @@
 
 @yield('scripts')
 <script>
+
      // Get the button
      let mybutton = document.getElementById("myBtn");
 

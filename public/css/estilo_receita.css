@@ -1,3 +1,21 @@
+.table-aguardo label {
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+.table-aguardo input[type="checkbox"] {
+    display: none;
+}
+
+.table-aguardo table {
+    display: none;
+}
+.table-aguardo input:checked ~ table {
+    display: table;
+}
+
+
+
 
 .table > :not(caption) > * > * {
 

@@ -42,7 +42,7 @@
                                             Inicial <span class="sr-only">(Pagina Atual)</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="http://127.0.0.1:8000/cardapio">Cardápio</a>
+                                        <a class="nav-link" href="http://127.0.0.1:8000/produtos/mostrarTipo/3">Cardápio</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/montesuapizza">Monte Sua
