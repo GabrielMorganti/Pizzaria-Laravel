@@ -33,7 +33,7 @@ class UserController extends Controller
 
 
     $users = User::all();
-      $user = User::orderBy('nome');//->paginate(10);
+    $user = User::orderBy('nome');//->paginate(10);
         return view('user.index')->with(compact('users', 'user'));
     }
 
@@ -42,7 +42,10 @@ class UserController extends Controller
      */
     public function create()
     {
+
+        $cargo = Cargo::class;
         $user = null ;
+
         return view('user.form')->with(compact('user'));
     }
 
@@ -51,7 +54,9 @@ class UserController extends Controller
      */
     public function Store(Request $request)
     {
+        $cargo = Cargo::all();
         $user = User::create($request->all());
+
         return redirect()->route('user.index')->with('success','Cadastrado com Sucesso!');
     }
 
@@ -70,7 +75,8 @@ class UserController extends Controller
     public function Edit(Int $id)
     {
         $user = User::find($id);
-        return view('user.form')->with(compact('user'));
+        $cargo = Cargo::all();
+        return view('user.form')->with(compact('user','cargo'));
 
     }
 
@@ -79,6 +85,7 @@ class UserController extends Controller
      */
     public function Update(Request $request, Int $id)
     {
+        $cargo = Cargo::all();
         $user = User::find($id);
         $user->update($request->all());
         return redirect()->route('user.index')->with('success', 'Atualizado com Sucesso!');

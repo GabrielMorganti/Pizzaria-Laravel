@@ -95,7 +95,7 @@ Route::middleware('auth')->group(function () {
             Route::get('/{id}','show')->name('user.show');
 
             Route::post('/store','store')->name('user.store');
-            Route::post('/update','update')->name('user.update');
+            Route::post('/update/{id}','update')->name('user.update');
             Route::delete('/destroy/{id}','destroy')->name('user.destroy');
         });
 /**

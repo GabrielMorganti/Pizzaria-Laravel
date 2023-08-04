@@ -14,7 +14,7 @@
     </h1>
     <form method="post"
         action="{{ $user ? route('user.update', ['id' => $user->id]) : route('user.store') }}"
-        id="user-form" enctype="multipart/form-data" class="mt-6">
+        enctype="multipart/form-data" class="mt-6">
         @csrf
 
         {{-- Dados do user --}}
@@ -30,18 +30,19 @@
                         <div class="col-md-2">
                             <label for="id_cargo" class="form-label">Cargo*</label>
                             <select class="form-select" name="id_cargo" id="id_cargo" required>
-                                <option value="">Selecione</option>
-                                @foreach ($user::orderBy('id_cargo')->get() as $item)
-                    <option class="" value="{{ $user->id_cargo }}"
-                        @selected(
-                            ($user && $user->id_cargo == $cargo->id_cargo)? true
-                            :
-                            false
-                        )
-                        >
+                                 <option value="">Selecione</option>
+                                @foreach ($cargo as $item)
+                    <option class="" value="{{ $item->id_cargo }}"
+                        @selected(old('id_cargo') || ($user && $user->id_cargo == $item->id_cargo))>
+
+
                         {{$item->cargo}}
                     </option>
                 @endforeach
+
+
+
+
                             </select>
                         </div>
 
