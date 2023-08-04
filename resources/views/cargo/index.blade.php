@@ -1,7 +1,9 @@
 @extends('layouts.baseadm')
 @section('contentadm')
 
-<h1>Cargos</h1>
+@include('layouts.partials.menu')
+
+<h1 class="mt-5">Cargos</h1>
 <table class="table table-striped">
     <thead>
         <tr>

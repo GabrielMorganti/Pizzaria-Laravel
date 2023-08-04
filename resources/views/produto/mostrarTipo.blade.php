@@ -3,6 +3,7 @@
 {{-- HEADER --}}
 <div class="container-fluid header">
     <div class="row background d-none d-md-block d-xl-block">
+
         <!-- Telefones -->
         <div class="flex-container d-none d-md-block d-xl-block">
             <div class="row contato-entrega">
@@ -44,10 +45,10 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/cardapio">Cardápio</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/montesuapizza">Monte Sua
                                             Pizza</a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/contato">Contato</a>
                                     </li>
@@ -141,11 +142,11 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="http://127.0.0.1:8000/montesuapizza">
                                         <h2>Monte Sua Pizza</h2>
                                     </a>
-                                </li>
+                                </li> --}}
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="http://127.0.0.1:8000/contato">
@@ -156,6 +157,12 @@
                                     <a class="nav-link" href="http://127.0.0.1:8000/sobrenos">
                                         <h2>Sobre Nós</h2>
                                     </a>
+                                </li>
+                                <li class="entrega">
+                                    <p class=""><i class="bi bi-telephone"></i> Contato para entrega: (11)98829-5583 | (11)92548-7734</p>
+                                </li>
+                                <li class="entrega">
+                                    <p><i class="bi bi-whatsapp"></i> WhatsApp: (11)99866-9082</p>
                                 </li>
                             </ul>
                         </div>
@@ -188,7 +195,7 @@
                         <tr>
                             <th scope="row"></th>
                             <td>
-                                <h1> <img src="img/icons8-rolling-pin-50.png" alt=""> CONHEÇA NOSSO CARDÁPIO
+                                <h1 class=""> <img src="img/icons8-rolling-pin-50.png" alt=""> CONHEÇA NOSSO CARDÁPIO
                                 </h1>
                             </td>
                         </tr>
@@ -213,41 +220,44 @@
                     </tbody>
                     </thead>
                 </table>
-                        <tr>
-                            <div class="table-aguardo">
-                                <input id="aguardando" type="checkbox">
+                        <div class="table-aguardo table-hover">
+                            <input id="aguardando" type="checkbox">
                                 <label for="aguardando" class="header"><h1 class="white"><img src="{{ url('img/icons8-pizza-80.png') }}" width="10%"> PIZZAS</h1></td></label>
                                  <table cellspacing="0">
                                     <tr>
-                                       <td><a href="http://127.0.0.1:8000/produtos/cardapio/4"><h3 class="white">PIZZAS PREMIUM</h3></a></td>
+                                       <td class="table-hover"><a href="http://127.0.0.1:8000/produtos/cardapio/4"><h3 class="white">PIZZAS PREMIUM</h3></a></td>
                                     </tr>
                                     <tr>
-                                       <td><a href="http://127.0.0.1:8000/produtos/cardapio/5"><h3 class="white"> PIZZAS TRADICIONAIS</h3></a></td>
+                                       <td class="table-hover"><a href="http://127.0.0.1:8000/produtos/cardapio/5"><h3 class="white"> PIZZAS TRADICIONAIS</h3></a></td>
                                     </tr>
                                     <tr>
-                                       <td><a href="http://127.0.0.1:8000/produtos/cardapio/2"><h3 class="white"> PIZZAS DOCES</h3></a></td>
+                                       <td class="table-hover"><a href="http://127.0.0.1:8000/produtos/cardapio/2"><h3 class="white"> PIZZAS DOCES</h3></a></td>
                                     </tr>
                                     <tr>
                                  </table>
-                              </div>
-                              <hr>
-                        </tr>
+                            <hr>
+                        </div>
+                        <div class="table-aguardo table-hover">
+                            <input id="finalizado" type="checkbox">
+                                <label for="finalizado" class="header"><h1 class="white"><i class="bi bi-cup-straw"></i>BEBIDAS</h1></td></label>
+                                 <table cellspacing="0">
+                                    <tr>
+                                       <td class="table-hover"><a href="http://127.0.0.1:8000/produtos/cardapio/7"><h3 class="white">SUCOS</h3></a></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="table-hover"><a href="http://127.0.0.1:8000/produtos/cardapio/8"><h3 class="white">REFRIGERANTES</h3></a></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="table-hover"><a href="http://127.0.0.1:8000/produtos/cardapio/9"><h3 class="white">CERVEJAS</h3></a></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="table-hover"><a href="http://127.0.0.1:8000/produtos/cardapio/10"><h3 class="white">DRINKS</h3></a></td>
+                                    </tr>
+                                    <tr>
+                                 </table>
+                            <hr>
+                        </div>
 
-
-
-                <table class="table table-hover text-center">
-                    <thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row"></th>
-                            <td><a href="http://127.0.0.1:8000/bebidas">
-                                    <h1><i class="bi bi-cup-straw fotinha"></i>BEBIDAS</h1>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    </thead>
-                </table>
 
                 <table class="table table-hover text-center">
                     <thead>
@@ -264,8 +274,8 @@
                 </table>
             </div>
 
-            <div class="col-md-8 mt-2">
-                <h4 class="text-center">{{ $tiposProdutos->tipo }}</h4>
+            <div class="col-md-8 ajuste">
+                <h2 class="text-center font2">{{ $tiposProdutos->tipo }}</h2>
                 @foreach ($produtos->get() as $produto)
                     <button onclick="topFunction()" id="myBtn" title="Go to top"><i
                             class="bi bi-arrow-up"></i></button>
@@ -274,31 +284,28 @@
 
                         <div class="row align-items-start">
                             <div class="col">
-                                <img src="{{ url('storage/fotos/' . $produto->foto) }}" alt=""
+                                <img class="img-produto" src="{{ url('storage/fotos/' . $produto->foto) }}" alt=""
                                     width="100%">
                             </div>
                             <div class="col">
-                                <h3 class="text-start">{{$produto->nome}}</h3>
-                                <h5 class="text-start">INGREDIENTES:</h5>
-                                <p class="text-start">
+                                <h3 class="text-start font2">{{$produto->nome}}</h3>
+                                <h5 class="text-start font2">INGREDIENTES:</h5>
+                                <p class="text-start font2">
                                     {{$produto->descricao}}
                                 </p>
                             </div>
                             <div class="col">
-                                <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos*</strong></label>
+                                <label class="form-label mt-2" for="id_categoria"><strong>Tamanhos e preços</strong></label>
                                 <br>
                                 <select class="form-select" id="id_tamanho" name="id_tamanho">
                                     <option value="" selected>Escolha o tamanho</option>
-                                    @foreach ($produtosTamanho::orderBy('id_produto')->get() as $item)
+                                    @foreach ($produto->tamanhos()->get() as $item)
 
-                                    <option value="">{{$item->tamanho->tamanho}}</option>
-                                    {{-- <option value="R$ 47.00">{{$produto->tamanhos->tamanho->tamanho}}</option> --}}
+                                    <option value="">{{$item->tamanho->tamanho. " |             R$" .$item->preco  }}</option>
                                     @endforeach
                                 </select>
                                 <br>
-                                <strong> Preço </strong><input disabled class="text-center border border-start-0"
-                                    id="caixa1" style="width: 70px;" type="text" />
-                                <div id="div_personalizar" style="visibility: hidden;"></div>
+
                                 <br>
                             </div>
                         </div>

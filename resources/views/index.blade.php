@@ -42,12 +42,12 @@
                                             Inicial <span class="sr-only">(Pagina Atual)</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="http://127.0.0.1:8000/produtos/mostrarTipo/3">Cardápio</a>
+                                        <a class="nav-link" href="http://127.0.0.1:8000/produtos/cardapio/3">Cardápio</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/montesuapizza">Monte Sua
                                             Pizza</a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/contato">Contato</a>
                                     </li>
@@ -124,28 +124,28 @@
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/cardapio"
+                                    <a class="nav-link dropdown-toggle" href=""
                                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <h2>Cardápio</h2>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item"
-                                                href="http://127.0.0.1:8000/entradas">Entradas</a>
+                                                href="http://127.0.0.1:8000/produtos/cardapio/3">Entradas</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/pizzas">Pizzas</a>
+                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/produtos/cardapio/4">Pizzas</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/bebidas">Bebidas</a>
+                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/produtos/cardapio/7">Bebidas</a>
                                         </li>
                                         <li><a class="dropdown-item"
-                                                href="http://127.0.0.1:8000/sobremesas">Sobremesas</a>
+                                                href="http://127.0.0.1:8000/produtos/cardapio/11">Sobremesas</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="http://127.0.0.1:8000/montesuapizza">
                                         <h2>Monte Sua Pizza</h2>
                                     </a>
-                                </li>
+                                </li> --}}
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="http://127.0.0.1:8000/contato">
@@ -185,9 +185,9 @@
     <div class="row mt-5"></div>
 
     <div class="row mt-5 promocao">
-        <h2 class="">
+        <h1 class="font2">
                 Confira nossas promoções imperdíveis!
-        </h2>
+        </h1>
         <div class="d-none d-md-block d-xl-block">
             <div class="flex-container">
                 <div class="col-md-3 promo"> <a class="d-flex justify-content-center" href=""><img
@@ -271,18 +271,18 @@
 
 
     <div class="row mt-5 promocao">
-        <h2 class="">
-            Confira nosso Cardápio:
-        </h2>
+        <h1 class="font2">
+            Confira nosso Cardápio!
+        </h1>
         <div class="d-none d-md-block d-xl-block">
             <div class="flex-container">
-                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/entradas"><img width="360px"
+                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/produtos/cardapio/3"><img width="360px"
                             class="rounded img-fluid" src="{{ url('img/batata2.png') }}" alt="Promoção2"></a></div>
-                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/pizzas"><img width="360px"
+                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/produtos/cardapio/4"><img width="360px"
                             class="rounded img-fluid" src="{{ url('img/pastel2.png') }}" alt="Promoção"></a></div>
-                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/pizzas"><img width="360px"
+                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/produtos/cardapio/5"><img width="360px"
                             class="rounded img-fluid" src="{{ url('img/portuguesa2.png') }}" alt="Promoção5"></a></div>
-                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/sobremesas"><img width="360px"
+                <div class="col-md-3 me-2 promo"> <a class="d-flex justify-content-center" href="http://127.0.0.1:8000/produtos/cardapio/11"><img width="360px"
                             class="rounded img-fluid" src="{{ url('img/petit2.png') }}" alt="Promoção4"></a></div>
             </div>
         </div>
@@ -290,37 +290,37 @@
         <div class="d-block d-md-none">
             <div class="flex-container">
                 <div class="col-md-3 me-2 promo">
-                    <a class="" href="http://127.0.0.1:8000/entradas"><img
+                    <a class="" href="http://127.0.0.1:8000/produtos/cardapio/3"><img
                     class="rounded img-fluid" src="{{ url('img/batata2.png') }}" alt="Promoção2"></a>
                 </div>
                 <div class="col-md-3 me-2 promo">
-                    <a class="" href="http://127.0.0.1:8000/pizzas"><img
+                    <a class="" href="http://127.0.0.1:8000/produtos/cardapio/4"><img
                     class="rounded img-fluid" src="{{ url('img/pastel2.png') }}" alt="Promoção"></a>
                 </div>
             </div>
             <div class="flex-container mt-3">
                 <div class="col-md-3 me-2 promo">
-                    <a class="" href="http://127.0.0.1:8000/pizzas"><img
+                    <a class="" href="http://127.0.0.1:8000/produtos/cardapio/5"><img
                     class="rounded img-fluid" src="{{ url('img/portuguesa2.png') }}" alt="Promoção5"></a>
                 </div>
 
                 <div class="col-md-3 me-2 promo">
-                    <a class="" href="http://127.0.0.1:8000/sobremesas"><img
+                    <a class="" href="http://127.0.0.1:8000/produtos/cardapio/11"><img
                     class="rounded img-fluid" src="{{ url('img/petit2.png') }}" alt="Promoção4"></a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-3">
-            <a class="btn mt-4 botao" href="http://127.0.0.1:8000/cardapio">Ver Mais</a>
+            <a class="btn mt-4 botao" href="http://127.0.0.1:8000/produtos/cardapio/5">Ver Mais</a>
         </div>
     </div>
 
     <div class="row mt-5">
-        <h1>Entrega e Retirada</h1>
+        <h1 class="font2">Entrega e Retirada</h1>
 
-        <h3 class="mt-3"><span><i class="bi bi-bicycle"></span></i>Entrega 60 min </h3>
-        <h3 class="mt-3"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <h3 class="mt-3 font2"><span><i class="bi bi-bicycle"></span></i>Entrega 60 min </h3>
+        <h3 class="mt-3 font2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M4 3h8l-1 9h-6z" />
             <path d="M7 18h2v3h-2z" />
@@ -371,14 +371,14 @@
     <div class="row mt-5">
 
         <div class="col-md-12 premios">
-            <h2 class="text-center">🍕🏆 Orgulhosamente Premiada pelo Guia Michelin! 🏆🍕</h2>
+            <h2 class="text-center font2">🍕🏆 Orgulhosamente Premiada pelo Guia Michelin! 🏆🍕</h2>
 
-            <h4 class="mt-2 text-center">É com imensa alegria que anunciamos que a nossa pizzaria foi agraciada com o
+            <p class="mt-2 text-center font2 premio">É com imensa alegria que anunciamos que a nossa pizzaria foi agraciada com o
                 prestigioso Prêmio Michelin não apenas uma vez, mas duas vezes consecutivas! Em 2022 e novamente em
                 2023, fomos reconhecidos pelo Guia Michelin como uma das melhores pizzarias do mundo.
                 A conquista do cobiçado prêmio é o resultado do incansável trabalho em equipe, da dedicação apaixonada à
                 arte da pizza e do compromisso constante em oferecer a você, nosso cliente querido, uma experiência
-                gastronômica única e inesquecível.</h4>
+                gastronômica única e inesquecível.</p>
         </div>
 
         <div class="col-md-6 d-flex justify-content-center">

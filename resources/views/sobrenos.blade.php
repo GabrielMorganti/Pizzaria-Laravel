@@ -42,12 +42,12 @@
                                             Inicial <span class="sr-only">(Pagina Atual)</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="http://127.0.0.1:8000/cardapio">Cardápio</a>
+                                        <a class="nav-link" href="http://127.0.0.1:8000/produtos/cardapio/3">Cardápio</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/montesuapizza">Monte Sua
                                             Pizza</a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/contato">Contato</a>
                                     </li>
@@ -124,28 +124,28 @@
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/cardapio"
+                                    <a class="nav-link dropdown-toggle" href=""
                                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <h2>Cardápio</h2>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item"
-                                                href="http://127.0.0.1:8000/entradas">Entradas</a>
+                                                href="http://127.0.0.1:8000/produtos/cardapio/3">Entradas</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/pizzas">Pizzas</a>
+                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/produtos/cardapio/5">Pizzas</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/bebidas">Bebidas</a>
+                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/produtos/cardapio/7">Bebidas</a>
                                         </li>
                                         <li><a class="dropdown-item"
-                                                href="http://127.0.0.1:8000/sobremesas">Sobremesas</a>
+                                                href="http://127.0.0.1:8000/produtos/cardapio/11">Sobremesas</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="http://127.0.0.1:8000/montesuapizza">
                                         <h2>Monte Sua Pizza</h2>
                                     </a>
-                                </li>
+                                </li> --}}
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="http://127.0.0.1:8000/contato">
@@ -189,9 +189,9 @@
 
         </div>
         <div class="col-md-5">
-            <h2 class="text-center">Nossa História</h2>
+            <h2 class="text-center font2">Nossa História</h2>
             <p class="text-center">✻</p>
-            <p class="">Nossa história começou em uma simples rodinha de amigos, um grupo diversificado de amantes
+            <p class="font2 premio">Nossa história começou em uma simples rodinha de amigos, um grupo diversificado de amantes
                 de pizza que acreditavam que a felicidade está em uma fatia quentinha e saborosa.
                 Tudo começou em uma noite agradável, quando estávamos reunidos em torno de uma mesa,
                 compartilhando risadas e histórias enquanto saboreávamos algumas das melhores pizzas da cidade.
@@ -224,9 +224,9 @@
         </div>
 
         <div class="col-md-5">
-            <h2 class="text-center">Nossa Gastronomia</h2>
+            <h2 class="text-center font2">Nossa Gastronomia</h2>
             <p class="text-center">✻</p>
-            <p class="">Cada um de nós contribuiu com seus talentos únicos: alguns com habilidades culinárias
+            <p class="font2 premio">Cada um de nós contribuiu com seus talentos únicos: alguns com habilidades culinárias
                 excepcionais, outros com uma visão inovadora de negócios e, é claro, todos com um paladar apurado.
                 Assim, nasceu a Bella-Pizzaria, uma casa de tradição familiar e receitas secretas que conquistam
                 paladares há gerações. Nossos ingredientes são selecionados cuidadosamente, priorizando a qualidade
@@ -247,9 +247,9 @@
 
         </div>
         <div class="col-md-5">
-            <h2 class="text-center">Nossa Casa</h2>
+            <h2 class="text-center font2">Nossa Casa</h2>
             <p class="text-center">✻</p>
-            <p class="">Mas, mais do que apenas um lugar para comer pizza, a Bella-Pizzaria é um espaço acolhedor
+            <p class="font2 premio">Mas, mais do que apenas um lugar para comer pizza, a Bella-Pizzaria é um espaço acolhedor
                 e alegre, onde cada cliente é recebido com um sorriso caloroso e tratado como um amigo de longa
                 data. Nossa equipe é apaixonada pelo que faz e está sempre pronta para ajudá-lo a encontrar a
                 pizza perfeita para cada ocasião. Na Bella-Pizzaria, acreditamos que cada pizza conta uma

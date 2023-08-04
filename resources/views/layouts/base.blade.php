@@ -94,12 +94,12 @@
                                 <a href="http://127.0.0.1:8000">
                                     <li>Pagina inicial</li>
                                 </a>
-                                <a href="http://127.0.0.1:8000/cardapio">
+                                <a href="http://127.0.0.1:8000/produtos/cardapio/3">
                                     <li>Cardápio</li>
                                 </a>
-                                <a href="http://127.0.0.1:8000/montesuapizza">
+                                {{-- <a href="http://127.0.0.1:8000/montesuapizza">
                                     <li>Monte Sua Pizza</li>
-                                </a>
+                                </a> --}}
                                 <a href="http://127.0.0.1:8000/contato">
                                     <li>Contato</li>
                                 </a>

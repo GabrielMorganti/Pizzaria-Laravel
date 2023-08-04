@@ -42,12 +42,12 @@
                                             Inicial <span class="sr-only">(Pagina Atual)</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="http://127.0.0.1:8000/cardapio">Cardápio</a>
+                                        <a class="nav-link" href="http://127.0.0.1:8000/produtos/cardapio/3">Cardápio</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/montesuapizza">Monte Sua
                                             Pizza</a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://127.0.0.1:8000/contato">Contato</a>
                                     </li>
@@ -124,28 +124,28 @@
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/cardapio"
+                                    <a class="nav-link dropdown-toggle" href=""
                                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <h2>Cardápio</h2>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item"
-                                                href="http://127.0.0.1:8000/entradas">Entradas</a>
+                                                href="http://127.0.0.1:8000/produtos/cardapio/3">Entradas</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/pizzas">Pizzas</a>
+                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/produtos/cardapio/4">Pizzas</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/bebidas">Bebidas</a>
+                                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/produtos/cardapio/7">Bebidas</a>
                                         </li>
                                         <li><a class="dropdown-item"
-                                                href="http://127.0.0.1:8000/sobremesas">Sobremesas</a>
+                                                href="http://127.0.0.1:8000/produtos/cardapio/11">Sobremesas</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="http://127.0.0.1:8000/montesuapizza">
                                         <h2>Monte Sua Pizza</h2>
                                     </a>
-                                </li>
+                                </li> --}}
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="http://127.0.0.1:8000/contato">
@@ -187,8 +187,8 @@
     <div class="row salao mt-5">
         <div class="col-md-6">
             <img class="teste img-fluid" src="{{ url('img/pizzariaSalao2.jpg') }}" alt="">
-            <h3 class="text-center">🍕🎉 Aluguel do Salão da Nossa Pizzaria para Festas e Casamentos! 🎉🍕</h3>
-            <p class="text-center">É com imensa alegria que anunciamos uma novidade especial em nossa pizzaria! Agora
+            <h2 class="text-center font2">🍕🎉 Aluguel do Salão da Nossa Pizzaria para Festas e Casamentos! 🎉🍕</h2>
+            <p class=" font2 salao">É com imensa alegria que anunciamos uma novidade especial em nossa pizzaria! Agora
                 você pode desfrutar do ambiente acolhedor e saboroso do nosso espaço para celebrar momentos
                 inesquecíveis. Estamos disponibilizando o aluguel do nosso lindo salão para festas, casamentos e
                 diversos tipos de eventos, com buffet incluso.
@@ -208,11 +208,11 @@
                     }//Fecha o if da mensagem de alerta
                 @endphp
 
-            <h6><i class="bi bi-geo-alt "></i> Av. Ramiro Colleoni, 110 - Centro, Santo André</h6>
+            <h5 class="font2"><i class="bi bi-geo-alt "></i> Av. Ramiro Colleoni, 110 - Centro, Santo André</h5>
             <div class="mt-3"></div>
-            <h6> <i class="bi bi-telephone"></i> (11)92548-7734 | (11)98829-5583</h6>
+            <h5 class="font2"> <i class="bi bi-telephone"></i> (11)92548-7734 | (11)98829-5583</h5>
             <div class="mt-3"></div>
-            <h6> <i class="bi bi-envelope-paper"></i> Bella-PizzariaT94@gmail.com</h6>
+            <h5 class="font2"> <i class="bi bi-envelope-paper"></i> Bella-PizzariaT94@gmail.com</h5>
             <form action="?" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
@@ -249,8 +249,8 @@
     <!-- MAPA -->
 
 
-    <h1 class="mt-5">NOSSA UNIDADE:</h1>
-    <p><strong>Endereço:</strong> Av. Ramiro Colleoni, 110 - Centro, Santo André - SP, 09040-160</p>
+    <h1 class="mt-5 font2">NOSSA UNIDADE:</h1>
+    <p class="font2"><strong>Endereço:</strong> Av. Ramiro Colleoni, 110 - Centro, Santo André - SP, 09040-160</p>
     <script src='http://maps.google.com/maps/api/js?key=AIzaSyDv7YRz1WWPhkr6aim8wEm4WDPBdk81z54'></script>
     <div class="col-md-12 mb-5">
         <div style='overflow:hidden;height:380px;width:100%;color: #0095eb'>

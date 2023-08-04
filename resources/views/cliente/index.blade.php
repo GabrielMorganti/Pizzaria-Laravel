@@ -1,7 +1,9 @@
 @extends('layouts.baseadm')
 @section('contentadm')
 
-<h1>Clientes</h1>
+@include('layouts.partials.menu')
+
+<h1 class="mt-5">Clientes</h1>
 <h6>
     <a class="btn btn-primary" href="{{ route('cliente.create')}}">Cadastrar novo Cliente</a>
 </h6>
@@ -22,8 +24,9 @@
         <tr>
             <td>
                 <a class="btn btn-success" href="{{route('cliente.edit', ['id_cliente'=>$cliente->id_cliente])}}"><i class="bi bi-pencil"></i></a>
+                <br><br>
                 <a class="btn btn-primary" href="{{ route('cliente.show', ['id'=>$cliente->id_cliente])}}"><i class="bi bi-eye"></i></a>
-
+                <br><br>
                 <form action="{{ route('cliente.destroy',['id'=>$cliente->id_cliente])}}" method="post">
                     @csrf
                     @method('delete')

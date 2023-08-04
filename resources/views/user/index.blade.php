@@ -1,7 +1,9 @@
 @extends('layouts.baseadm')
 @section('contentadm')
 
-<h1>
+@include('layouts.partials.menu')
+
+<h1 class="mt-5">
     <i class="fa-solid fa-pizza-slice"></i>
     usuarios -
     <a href="{{route('user.create')}}" class="btn btn-primary">

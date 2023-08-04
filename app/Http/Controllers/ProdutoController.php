@@ -28,9 +28,10 @@ class ProdutoController extends Controller
         $produtos = Produto::where('id_tipo_produto', $id_tipo_produto)->orderBy('created_at');
         $tiposProdutos = TipoProduto::find($id_tipo_produto);
         $produtosTamanho = ProdutoTamanho::class;
+        $tamanhos = tamanho::class;
 
         return view('produto.mostrarTipo')
-            ->with(compact('produtos', 'tiposProdutos', 'produtosTamanho'));
+            ->with(compact('produtos', 'tiposProdutos', 'produtosTamanho', 'tamanhos'));
     }
 
 

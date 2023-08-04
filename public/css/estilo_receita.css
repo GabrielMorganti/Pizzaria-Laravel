@@ -15,8 +15,6 @@
 }
 
 
-
-
 .table > :not(caption) > * > * {
 
     background-color: transparent;
@@ -200,7 +198,7 @@ body{
             height: 50px;
             margin-top: 0px; /* altura que está do topo */
             top: 0px; /* altura que vai parar antes do topo */
-            margin-bottom: 578px;
+            margin-bottom: 778px;
             position: sticky;
         }
 
@@ -362,6 +360,13 @@ body{
     .font2{
         font-family: 'News Cycle', sans-serif;
     }
+    .premio{
+        font-size: 1.1em;
+    }
+
+    .salao{
+        font-size: 1em;
+    }
 
 
 
@@ -372,6 +377,10 @@ body{
 
 /* Header CELL */
 
+
+    .entrega{
+        color: white;
+    }
     .navbar-cell .flex-container{
         display: flex;
         align-items: end;
@@ -428,17 +437,24 @@ body{
 
 /* INDEX */
 
-.pizzaria{
-    margin-left: 0px;
-}
+    .pizzaria{
+        margin-left: 0px;
+    }
 
-.menufixo{
-    height: 0px;
-    margin-top: 0px; /* altura que está do topo */
-    top: 0px; /* altura que vai parar antes do topo */
-    margin-bottom: 450px;
-    position: relative;
-}
+    .menufixo{
+        height: 0px;
+        margin-top: 0px; /* altura que está do topo */
+        top: 0px; /* altura que vai parar antes do topo */
+        margin-bottom: 450px;
+        position: relative;
+    }
+
+    .ajuste{
+        margin-top: 240px;
+    }
+    .img-produto{
+        width: 200px;
+    }
 
 /* /INDEX */
 
